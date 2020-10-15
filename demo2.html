@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+<div id="time"></div>
+<script>
+        arr=[1,2,3,4,5,6,7,8,9];
+        i=0;
+        var t=setInterval('show()',2000);
+        function show() {
+            // $("#time").append(arr[i]);
+            console.log(arr[i]);
+            i=i+1;
+            //如果超过数组长度，清除定时器
+            if(i >= arr.length){
+                clearInterval(t)
+            }
+        }
+</script>
+</body>
+</html>
