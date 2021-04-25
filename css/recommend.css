@@ -1,0 +1,13 @@
+.news_left ul li {
+	font-size: 18px;
+	padding: 10px 0;
+	border-bottom: 1px  solid #CCCCCC;
+}
+.news_left ul {
+	padding: 10px 20px 0 20px;
+}
+.news_left ul span {
+	margin-left: 10px;
+	color: #607D8B;
+	font-weight: 600;
+}

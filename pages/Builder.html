@@ -17,12 +17,12 @@
   <title>天蓝 – Coding.com</title>
   <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
 
-  <link rel="stylesheet" type="text/css" href="./libs/materialize/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
   
   
-  <link rel="stylesheet" type="text/css" href="./css/element-ui.css">
-  <link rel="stylesheet" type="text/css" href="css/news.css"/>
-  <script src="./libs/jquery/jquery-2.2.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/element-ui.css">
+  <link rel="stylesheet" type="text/css" href="../css/news.css"/>
+  <script src="../libs/jquery/jquery-2.2.0.min.js"></script>
 
 <body>
 
@@ -31,7 +31,7 @@
     <nav id="headNav" class="bg-color nav-transparent headbar-cover" style="background-color: #1DA7DA!important;">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="index.html" class="waves-effect waves-light">
+                <a href="../index.html" class="waves-effect waves-light">
                     
                         <!-- <img src="./imgs/logo/logo.png" class="logo-img" alt="LOGO"> -->
                     
@@ -41,19 +41,19 @@
 			<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
 			<ul class="right nav-menu">
 				<li class="hide-on-med-and-down nav-item">
-					<a href="index.html" class="waves-effect waves-light">
+					<a href="../index.html" class="waves-effect waves-light">
                         <!-- <i class="fa fa-home"></i> -->
 						<span>首页</span>
 					</a>
 				</li>
 				<li class="hide-on-med-and-down nav-item">
-					<a href="./pages/recommend.html" class="waves-effect waves-light">
+					<a href="../pages/recommend.html" class="waves-effect waves-light">
                         <!-- <i class="fa fa-tags"></i> -->
                     <span>推荐文章</span>
                 </a>
 				</li>
 				<li class="hide-on-med-and-down nav-item">
-					<a href="./pages/TianLan.html" class="waves-effect waves-light">
+					<a href="../pages/TianLan.html" class="waves-effect waves-light">
 					<!-- <i class="fa fa-bookmark"></i> -->
 						<span>关于天蓝</span>
                     <!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
@@ -61,7 +61,7 @@
                 
 				</li>
 				<li class="hide-on-med-and-down nav-item">
-					<a href="./pages/Builder.html" class="waves-effect waves-light">
+					<a href="./Builder.html" class="waves-effect waves-light">
                         <!-- <i class="fa fa-user-circle-o"></i> -->
                     <span>关于作者</span>
                     <!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
@@ -69,13 +69,13 @@
                 
 				</li>
 				<li class="hide-on-med-and-down nav-item">
-                <a href="./pages/Books.html" class="waves-effect waves-light">
+                <a href="./Books.html" class="waves-effect waves-light">
                         <!-- <i class="fa fa-book"></i> -->
                     <span>我的书单</span>
                 </a>
 				</li>
 				<li class="hide-on-med-and-down nav-item">
-                <a href="./pages/community.html" class="waves-effect waves-light">
+                <a href="./community.html" class="waves-effect waves-light">
                         <!-- <i class="fa fa fa-rocket"></i> -->
                     <span>开发者社区</span>
                 </a>
@@ -113,71 +113,51 @@
 
 <div class="news">
 	<div class="news_left">
-		<h2>GO 编程模式：K8S VISITOR 模式</h2>
+		<h2>关于我</h2>
 		<hr/>
 		
-		<div class="content_head">
-			<p>
-				本篇文章主要想讨论一下，Kubernetes 的 kubectl 命令中的使用到到的一个编程模式 – Visitor（注：其实，kubectl 主要使用到了两个一个是Builder，另一个是Visitor）。本来，Visitor 是面向对象设计模英中一个很重要的设计模款（参看Wikipedia Visitor Pattern词条），这个模式是一种将算法与操作对象的结构分离的一种方法。这种分离的实际结果是能够在不修改结构的情况下向现有对象结构添加新操作，是遵循开放/封闭原则的一种方法。这篇文章我们重点看一下 kubelet 中是怎么使用函数式的方法来实现这个模式的。
+		<div class="content_head" style="height: 230px;">
+			<p class="paiban-p">
+				大家好! 我是杨玉龙，网名天蓝。
+			</p>
+			<p class="paiban-p">
+				17年开始接触IT，到现在也近四年了。但感觉自己还是一个新人！IT行业技术更新太快，稍不留意，就跟不上发展的步伐。
+			</p>
+			<p class="paiban-p">
+				目前主要职业为Web前端，主要着眼在PC（移动互联网时代，我是不是有点落伍了）。也在向Mobile转移，包括小程序，APP，PC桌面应用等努力。
 			</p>
 		</div>
-		<div class="content_img">
-			<img src="imgs/content-imgs/01.png" >
-			<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+		<div class="content_img" style="height: 230px;padding-left: 50px;">
+			<img src="../imgs/logo/Yang.jpg" style="width: 200px;">
 		</div>
-		<h4>一个简单示例</h4>
+		
+		<p class="paiban-p" style="display:inline-block ;margin-top: 25px;">
+			其实最初感兴趣的不是前端，而是嵌入式，就是软件控制硬件的东西，但是后来阴差阳错去学软件，学前端。终究二者还是有一定的关联的，也算是没有放弃吧！以后有时间的话，会向这方面发展！
+		</p>
 		<p class="paiban-p">
-			我们还是先来看一个简单设计模式的Visitor的示例。
+			2020年左右，现在处在一个大变革的时代吧！新名词层出不穷，一个月不进入互联网，就有点跟不上时代了！<br>
+			这两年美国制裁中国，许多国内的高科技企业都遭受着不公平的打压，奈何我从事的这个行业的所以根基（编程语言，编辑器等），软硬件（服务器，数据库，操作系统，CPU等），几乎全部是西方的，或者说是美国的。真害怕自己饭碗丢了。呼吁互联网人积极拥抱国产，拥抱开源！
 		</p>
-		<p class="paiban-p-shsj">
-			▲我们的代码中有一个Visitor的函数定义，还有一个Shape接口，其需要使用 Visitor函数做为参数。
+		<p class="paiban-p">
+			<b>网络信息</b><br>
+			Email : builder.deepmain@gmail.com   &nbsp;&nbsp;&nbsp; deepmain@foxmail.com<br>
+			<!-- QQ-mail: deepmain@foxmail.com <br> -->
+			微 博 : https://weibo.com/deepmain <br>
+			头 条 : 外空探索周刊
 		</p>
-		<p class="paiban-p-shsj">
-			▲我们的实例的对象 Circle和 Rectangle实现了 Shape 的接口的 accept() 方法，这个方法就是等外面给我传递一个Visitor。
-		</p>
-		......
-		<h5>阅读全文</h5>
 	</div>
 	<div class="news_right">
 		<input type="text" placeholder="Search" style="float: left; width: 160px;border: 1px solid #989898; height: 34px; padding-left: 10px;">
-		<img style="float: left;height: 36px;cursor: pointer;" src="imgs/tubiao/search.png" >
+		<img style="float: left;height: 36px;cursor: pointer;" src="../imgs/tubiao/search.png" >
 	</div>
 	<div class="news_right_two">
 		<h5>本站公告</h5>
 		<p>Weibo同步更新</p>
-		<img src="imgs/logo/weibo.png" style="width: 100%" >
+		<img src="../imgs/logo/weibo.png" style="width: 100%" >
 		<p>CSDN同步更新</p>
-		<img src="imgs/logo/csdn.jpg" >
-	</div>
-	<div class="news_left" style="margin-top: 30px;">
-		<h2>GO 编程模式：K8S VISITOR 模式</h2>
-		<hr/>
-		
-		<div class="content_head">
-			<p>
-				本篇文章主要想讨论一下，Kubernetes 的 kubectl 命令中的使用到到的一个编程模式 – Visitor（注：其实，kubectl 主要使用到了两个一个是Builder，另一个是Visitor）。本来，Visitor 是面向对象设计模英中一个很重要的设计模款（参看Wikipedia Visitor Pattern词条），这个模式是一种将算法与操作对象的结构分离的一种方法。这种分离的实际结果是能够在不修改结构的情况下向现有对象结构添加新操作，是遵循开放/封闭原则的一种方法。这篇文章我们重点看一下 kubelet 中是怎么使用函数式的方法来实现这个模式的。
-			</p>
-		</div>
-		<div class="content_img">
-			<img src="imgs/content-imgs/01.png" >
-			<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
-		</div>
-		<h4>一个简单示例</h4>
-		<p class="paiban-p">
-			我们还是先来看一个简单设计模式的Visitor的示例。
-		</p>
-		<p class="paiban-p-shsj">
-			▲我们的代码中有一个Visitor的函数定义，还有一个Shape接口，其需要使用 Visitor函数做为参数。
-		</p>
-		<p class="paiban-p-shsj">
-			▲我们的实例的对象 Circle和 Rectangle实现了 Shape 的接口的 accept() 方法，这个方法就是等外面给我传递一个Visitor。
-		</p>
-		......
-		<h5>阅读全文</h5>
+		<img src="../imgs/logo/csdn.jpg" >
 	</div>
 </div>
-
-
 
 <footer class="bg-color" style="height: 60px;margin-top: 50px;">
 	<div style="text-align: center;">
