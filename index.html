@@ -24,6 +24,7 @@
   
   <link rel="stylesheet" type="text/css" href="./css/element-ui.css">
   <link rel="stylesheet" type="text/css" href="css/news.css"/>
+  <link rel="stylesheet" type="text/css" href="css/animate.css"/>
   <script src="./libs/jquery/jquery-2.2.0.min.js"></script>
 
 <body>
@@ -93,7 +94,7 @@
     </nav>
 </header>
 
-<div class="carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+<div class="carousel-slider center index-cover wow bounceInUp" data-indicators="true" style="margin-top: -64px;">
 	<div class="carousel-item white-text bg-cover about-cover" style="height: 47vh;">
 		<div class="container">
 			<div class="row">
@@ -142,18 +143,20 @@
 			<h5>阅读全文</h5>
 		</a>
 	</div>
-	<div class="news_right">
-		<input type="text" placeholder="Search" style="float: left; width: 160px;border: 1px solid #989898; height: 34px; padding-left: 10px;">
-		<a href="pages/search.html">
-			<img style="float: left;height: 36px;cursor: pointer;" src="imgs/tubiao/search.png" >
-		</a>
-	</div>
-	<div class="news_right_two">
-		<h5>本站公告</h5>
-		<p>Weibo同步更新</p>
-		<img src="imgs/logo/weibo.png" style="width: 100%" >
-		<p>CSDN同步更新</p>
-		<img src="imgs/logo/csdn.jpg" >
+	<div id="div1" style="">
+		<div class="news_right">
+			<input type="text" placeholder="Search" style="float: left; width: 160px;border: 1px solid #989898; height: 34px; padding-left: 10px;">
+			<a href="pages/search.html">
+				<img style="float: left;height: 36px;cursor: pointer;" src="imgs/tubiao/search.png" >
+			</a>
+		</div>
+		<div class="news_right_two">
+			<h5>本站公告</h5>
+			<p>Weibo同步更新</p>
+			<img src="imgs/logo/weibo.png" style="width: 100%" >
+			<p>CSDN同步更新</p>
+			<img src="imgs/logo/csdn.jpg" >
+		</div>
 	</div>
 	<div class="news_left" style="margin-top: 30px;">
 		<h2>GO 编程模式：K8S VISITOR 模式</h2>
@@ -179,10 +182,101 @@
 			▲我们的实例的对象 Circle和 Rectangle实现了 Shape 的接口的 accept() 方法，这个方法就是等外面给我传递一个Visitor。
 		</p>
 		......
-		<h5>阅读全文</h5>
+		<a href="./pages/details.html">
+			<h5>阅读全文</h5>
+		</a>
 	</div>
+	<div class="news_left" style="margin-top: 30px;">
+		<h2>GO 编程模式：K8S VISITOR 模式</h2>
+		<hr/>
+		
+		<div class="content_head">
+			<p>
+				本篇文章主要想讨论一下，Kubernetes 的 kubectl 命令中的使用到到的一个编程模式 – Visitor（注：其实，kubectl 主要使用到了两个一个是Builder，另一个是Visitor）。本来，Visitor 是面向对象设计模英中一个很重要的设计模款（参看Wikipedia Visitor Pattern词条），这个模式是一种将算法与操作对象的结构分离的一种方法。这种分离的实际结果是能够在不修改结构的情况下向现有对象结构添加新操作，是遵循开放/封闭原则的一种方法。这篇文章我们重点看一下 kubelet 中是怎么使用函数式的方法来实现这个模式的。
+			</p>
+		</div>
+		<div class="content_img">
+			<img src="imgs/content-imgs/01.png" >
+			<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+		</div>
+		<h4>一个简单示例</h4>
+		<p class="paiban-p">
+			我们还是先来看一个简单设计模式的Visitor的示例。
+		</p>
+		<p class="paiban-p-shsj">
+			▲我们的代码中有一个Visitor的函数定义，还有一个Shape接口，其需要使用 Visitor函数做为参数。
+		</p>
+		<p class="paiban-p-shsj">
+			▲我们的实例的对象 Circle和 Rectangle实现了 Shape 的接口的 accept() 方法，这个方法就是等外面给我传递一个Visitor。
+		</p>
+		......
+		<a href="./pages/details.html">
+			<h5>阅读全文</h5>
+		</a>
+	</div>
+	<div class="news_left" style="margin-top: 30px;">
+		<h2>GO 编程模式：K8S VISITOR 模式</h2>
+		<hr/>
+		
+		<div class="content_head">
+			<p>
+				本篇文章主要想讨论一下，Kubernetes 的 kubectl 命令中的使用到到的一个编程模式 – Visitor（注：其实，kubectl 主要使用到了两个一个是Builder，另一个是Visitor）。本来，Visitor 是面向对象设计模英中一个很重要的设计模款（参看Wikipedia Visitor Pattern词条），这个模式是一种将算法与操作对象的结构分离的一种方法。这种分离的实际结果是能够在不修改结构的情况下向现有对象结构添加新操作，是遵循开放/封闭原则的一种方法。这篇文章我们重点看一下 kubelet 中是怎么使用函数式的方法来实现这个模式的。
+			</p>
+		</div>
+		<div class="content_img">
+			<img src="imgs/content-imgs/01.png" >
+			<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+		</div>
+		<h4>一个简单示例</h4>
+		<p class="paiban-p">
+			我们还是先来看一个简单设计模式的Visitor的示例。
+		</p>
+		<p class="paiban-p-shsj">
+			▲我们的代码中有一个Visitor的函数定义，还有一个Shape接口，其需要使用 Visitor函数做为参数。
+		</p>
+		<p class="paiban-p-shsj">
+			▲我们的实例的对象 Circle和 Rectangle实现了 Shape 的接口的 accept() 方法，这个方法就是等外面给我传递一个Visitor。
+		</p>
+		......
+		<a href="./pages/details.html">
+			<h5>阅读全文</h5>
+		</a>
+	</div>
+	<div class="news_left" style="margin-top: 30px;">
+		<h2>GO 编程模式：K8S VISITOR 模式</h2>
+		<hr/>
+		
+		<div class="content_head">
+			<p>
+				本篇文章主要想讨论一下，Kubernetes 的 kubectl 命令中的使用到到的一个编程模式 – Visitor（注：其实，kubectl 主要使用到了两个一个是Builder，另一个是Visitor）。本来，Visitor 是面向对象设计模英中一个很重要的设计模款（参看Wikipedia Visitor Pattern词条），这个模式是一种将算法与操作对象的结构分离的一种方法。这种分离的实际结果是能够在不修改结构的情况下向现有对象结构添加新操作，是遵循开放/封闭原则的一种方法。这篇文章我们重点看一下 kubelet 中是怎么使用函数式的方法来实现这个模式的。
+			</p>
+		</div>
+		<div class="content_img">
+			<img src="imgs/content-imgs/01.png" >
+			<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+		</div>
+		<h4>一个简单示例</h4>
+		<p class="paiban-p">
+			我们还是先来看一个简单设计模式的Visitor的示例。
+		</p>
+		<p class="paiban-p-shsj">
+			▲我们的代码中有一个Visitor的函数定义，还有一个Shape接口，其需要使用 Visitor函数做为参数。
+		</p>
+		<p class="paiban-p-shsj">
+			▲我们的实例的对象 Circle和 Rectangle实现了 Shape 的接口的 accept() 方法，这个方法就是等外面给我传递一个Visitor。
+		</p>
+		......
+		<a href="./pages/details.html">
+			<h5>阅读全文</h5>
+		</a>
+	</div>
+	
 </div>
-
+<center>
+	<a href="pages/recommend.html">
+		<h5 style="margin-left: -300px;color: #ccc;"><我也是有底线的-点击浏览更多/></h5>
+	</a>
+</center>
 
 
 <footer class="bg-color" style="height: 60px;margin-top: 50px;">
@@ -191,5 +285,13 @@
 	</div>
 </footer>
 
+<script src="./libs/jquery/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/guding.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/wow.min.js"></script>
+<script type="text/javascript">
+	new WOW().init();
+</script>
+</body>
 <!-- End of website body -->
 </html>

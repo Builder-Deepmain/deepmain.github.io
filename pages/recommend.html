@@ -23,6 +23,7 @@
   <link rel="stylesheet" type="text/css" href="../css/element-ui.css">
   <link rel="stylesheet" type="text/css" href="../css/news.css"/>
   <link rel="stylesheet" type="text/css" href="../css/recommend.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
   <script src="../libs/jquery/jquery-2.2.0.min.js"></script>
 
 <body>
@@ -92,7 +93,7 @@
     </nav>
 </header>
 
-<div class="carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
+<div class="carousel-slider center index-cover wow bounceInUp" data-indicators="true" style="margin-top: -64px;">
 	<div class="carousel-item white-text bg-cover about-cover" style="height: 47vh;">
 		<div class="container">
 			<div class="row">
@@ -135,21 +136,29 @@
 			<li>
 				2020/12/26 <a href="details.html"><span>企业中项目流程概括</span></a>  
 			</li>
+			<li>
+				2020/12/26 <a href="details.html"><span>git 在使用中遇到的问题记录</span></a>  
+			</li>
+			<li>
+				2020/12/26 <a href="details.html"><span>动画库wowjs的推荐使用</span></a>  
+			</li>
 		</ul>
 		
 	</div>
-	<div class="news_right">
-		<input type="text" placeholder="Search" style="float: left; width: 160px;border: 1px solid #989898; height: 34px; padding-left: 10px;">
-		<a href="search.html">
-			<img style="float: left;height: 36px;cursor: pointer;" src="../imgs/tubiao/search.png" >
-		</a>
-	</div>
-	<div class="news_right_two">
-		<h5>本站公告</h5>
-		<p>Weibo同步更新</p>
-		<img src="../imgs/logo/weibo.png" style="width: 100%" >
-		<p>CSDN同步更新</p>
-		<img src="../imgs/logo/csdn.jpg" >
+	<div id="div1">
+		<div class="news_right">
+			<input type="text" placeholder="Search" style="float: left; width: 160px;border: 1px solid #989898; height: 34px; padding-left: 10px;">
+			<a href="search.html">
+				<img style="float: left;height: 36px;cursor: pointer;" src="../imgs/tubiao/search.png" >
+			</a>
+		</div>
+		<div class="news_right_two">
+			<h5>本站公告</h5>
+			<p>Weibo同步更新</p>
+			<img src="../imgs/logo/weibo.png" style="width: 100%" >
+			<p>CSDN同步更新</p>
+			<img src="../imgs/logo/csdn.jpg" >
+		</div>
 	</div>
 </div>
 
@@ -159,5 +168,13 @@
 	</div>
 </footer>
 
+<script src="../libs/jquery/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/guding.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="../js/wow.min.js"></script>
+<script type="text/javascript">
+	// new WOW().init();
+</script>
+</body>
 <!-- End of website body -->
 </html>
