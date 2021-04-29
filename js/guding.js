@@ -1,3 +1,4 @@
+// 首页或者其他页面中看到的 右侧搜索公告随页面上下滑动固定显示
 window.onload = function () {
 	    var pos =  $('#div1').offset();// offset() 获得div1当前的位置，左上角坐标(x,y)
 	    $(window).scroll(function () { //滚动条滚动事件

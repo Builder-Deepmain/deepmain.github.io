@@ -128,7 +128,7 @@
 			<img src="../imgs/content-imgs/01.png" >
 			<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
 		</div>
-		<h4>一个简单示例</h4>
+		<h4 id="mk01">一个简单示例</h4>
 		<p class="paiban-p">
 			我们还是先来看一个简单设计模式的Visitor的示例。
 		</p>
@@ -151,10 +151,10 @@
 		<div class="news_right_two" style="height: 170px;">
 			<h5>&nbsp;目录</h5>
 			<ul>
-				<li>提出问题</li>
-				<li>作出假设</li>
-				<li>设计实验证明</li>
-				<li>得出结论</li>
+				<a ytag="20054" href="#mk01"><li>提出问题</li></a>
+				<a ytag="20055" href="#mk02"><li>作出假设</li></a>
+				<a ytag="20056" href="#mk03"><li>设计实验证明</li></a>
+				<a ytag="20057" href="#mk04"><li>得出结论</li></a>
 			</ul>
 		</div>
 	</div>
@@ -162,7 +162,7 @@
 		<h2>GO 编程模式：K8S VISITOR 模式</h2>
 		<hr/>
 		
-		<div class="content_head">
+		<div class="content_head" id="mk02">
 			<p>
 				本篇文章主要想讨论一下，Kubernetes 的 kubectl 命令中的使用到到的一个编程模式 – Visitor（注：其实，kubectl 主要使用到了两个一个是Builder，另一个是Visitor）。本来，Visitor 是面向对象设计模英中一个很重要的设计模款（参看Wikipedia Visitor Pattern词条），这个模式是一种将算法与操作对象的结构分离的一种方法。这种分离的实际结果是能够在不修改结构的情况下向现有对象结构添加新操作，是遵循开放/封闭原则的一种方法。这篇文章我们重点看一下 kubelet 中是怎么使用函数式的方法来实现这个模式的。
 			</p>
@@ -193,7 +193,9 @@
 		<p style="color: #FFFFFF;line-height: 60px;">Copyright © 2021 TianLan All Rights Reserved.</p>
 	</div>
 </footer>
-<script src="../libs/jquery/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="../libs/jquery/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script> -->
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="../js/maodian.js"></script>
 <script src="../js/guding.js" type="text/javascript" charset="utf-8"></script>
 
 <script src="../js/wow.min.js"></script>
