@@ -12,8 +12,8 @@ body {
 	clear: both;
 	float: left;
 	width: 850px;
-	height: 880px;
-	padding: 0 60px;
+	/* height: 880px; */
+	padding: 0 60px 30px;
 	background-color: white;
 	box-shadow: 0 0 5px #e5e5e5;
 }
@@ -65,14 +65,14 @@ body {
 }
 .news_left h5 {
 	/* text-align: center; */
-	margin: 0 auto;
+	margin: 0 auto 30px;
 	margin-top: 20px;
 	font-size: 16px;
 	width: 65px;
 }
 .news_left h5:hover {
 	cursor: pointer;
-	background-color: #00ba98;
+	background-color: #cec9bb;
 }
 .news_right {
 	float: left;

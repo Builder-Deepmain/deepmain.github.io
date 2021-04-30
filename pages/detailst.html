@@ -16,18 +16,18 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>天蓝 – Coding.com</title>
   <link rel="icon" type="image/png" href="../favicon.ico">
+  
+  
 
   <link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
   
   
   <link rel="stylesheet" type="text/css" href="../css/element-ui.css">
   <link rel="stylesheet" type="text/css" href="../css/news.css"/>
-  <link rel="stylesheet" type="text/css" href="../css/recommend.css"/>
   <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
   <script src="../libs/jquery/jquery-2.2.0.min.js"></script>
 
 <body>
-
 <div id="app">
 	<!-- Start of website body -->
 	<header class="navbar-fixed">
@@ -45,43 +45,43 @@
 				<ul class="right nav-menu">
 					<li class="hide-on-med-and-down nav-item">
 						<a href="../index.html" class="waves-effect waves-light">
-	                        <!-- <i class="fa fa-home"></i> -->
+				            <!-- <i class="fa fa-home"></i> -->
 							<span>首页</span>
 						</a>
 					</li>
 					<li class="hide-on-med-and-down nav-item">
 						<a href="../pages/recommend.html" class="waves-effect waves-light">
-	                        <!-- <i class="fa fa-tags"></i> -->
-	                    <span>推荐文章</span>
-	                </a>
+				            <!-- <i class="fa fa-tags"></i> -->
+				        <span>推荐文章</span>
+				    </a>
 					</li>
 					<li class="hide-on-med-and-down nav-item">
 						<a href="../pages/TianLan.html" class="waves-effect waves-light">
 						<!-- <i class="fa fa-bookmark"></i> -->
 							<span>关于天蓝</span>
-	                    <!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
+				        <!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
 						</a>
-	                
+				    
 					</li>
 					<li class="hide-on-med-and-down nav-item">
 						<a href="./Builder.html" class="waves-effect waves-light">
-	                        <!-- <i class="fa fa-user-circle-o"></i> -->
-	                    <span>关于作者</span>
-	                    <!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
-	                </a>
-	                
+				            <!-- <i class="fa fa-user-circle-o"></i> -->
+				        <span>关于作者</span>
+				        <!-- <i class="fa fa-chevron-down" aria-hidden="true"></i> -->
+				    </a>
+				    
 					</li>
 					<li class="hide-on-med-and-down nav-item">
-	                <a href="./Books.html" class="waves-effect waves-light">
-	                        <!-- <i class="fa fa-book"></i> -->
-	                    <span>我的书单</span>
-	                </a>
+				    <a href="./Books.html" class="waves-effect waves-light">
+				            <!-- <i class="fa fa-book"></i> -->
+				        <span>我的书单</span>
+				    </a>
 					</li>
 					<li class="hide-on-med-and-down nav-item">
-	                <a href="./community.html" class="waves-effect waves-light">
-	                        <!-- <i class="fa fa fa-rocket"></i> -->
-	                    <span>开发者社区</span>
-	                </a>
+				    <a href="./community.html" class="waves-effect waves-light">
+				            <!-- <i class="fa fa fa-rocket"></i> -->
+				        <span>开发者社区</span>
+				    </a>
 					</li>
 					
 					<li>
@@ -95,15 +95,15 @@
 	</header>
 	
 	<div class="carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-		<div class="carousel-item white-text bg-cover about-cover" style="height: 47vh;">
+		<div class="carousel-item white-text bg-cover about-cover" style="height: 30vh;">
 			<div class="container">
 				<div class="row">
 					<div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
 						<div class="brand">
-							<div class="title center-align">
+							<div class="title center-align" style="font-size: 40px;">
 							TianLan&#39;s Blog
 							</div>
-							<div class="description center-align">
+							<div class="description center-align" style="font-size: 14px;">
 							一个技术探索实验室
 							</div>
 						</div>
@@ -114,50 +114,76 @@
 	</div>
 	
 	
-	<div class="news">
-		<div class="news_left wow bounceInLeft">
-			<h2>推荐文章</h2>
+	<div v-for="(item) in details_wz" v-if="index_id == item.id" class="news" style="margin: -140px auto;" id="mk01">
+		<!-- v-if,真的不显示，假的显示 -->
+		<div class="news_left wow bounceInUp">
+			<h2>{{ item.title }}</h2>
 			<hr/>
-			<ul>
-				<li v-for="(item) in details_wz">
-					{{ item.time }} <a v-bind:href="['detailst.html?id='+item.id]"><span>{{ item.title }}</span></a>  
-					<!-- href="detailst.html?id=0001" -->
-				</li>
-			</ul>
+			
+			<div class="content_head" >
+				<p>{{ item.content1 }}</p>
+			</div>
+			<div class="content_img">
+				<img src="../imgs/content-imgs/01.png" >
+				<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+			</div>
+			<h4>代码实现</h4>
+			<p class="paiban-p" id="mk02">
+				{{ item.img1_title }}
+			</p>
+			<img v-bind:src="item.img1" style="width: 100%;">
+			<p class="paiban-p" id="mk03" v-if="item.img2 != '' ">
+				{{ item.img2_title }}
+			</p>
+			<img v-bind:src="item.img2" style="width: 100%;">
+			<p class="paiban-p" id="mk04">
+				{{ item.img3_title }}
+			</p>
+			<img v-bind:src="item.img3" style="width: 100%;">
+			<p id="mk05">
+				<a v-bind:href="item.link" target="_blank">源码下载</a>
+			</p>
 			
 		</div>
-		<div id="div1">
+		<div id="div1" class="wow bounceInRight">
 			<div class="news_right">
 				<input type="text" placeholder="Search" style="float: left; width: 160px;border: 1px solid #989898; height: 34px; padding-left: 10px;">
 				<a href="search.html">
-					<img style="float: left;height: 36px;cursor: pointer;" src="../imgs/tubiao/search.png" >
+					<img style="float: left;height: 36px;cursor: pointer;" src="../imgs/tubiao/search.png">
 				</a>
 			</div>
-			<div class="news_right_two">
-				<h5>本站公告</h5>
-				<p>Weibo同步更新</p>
-				<img src="../imgs/logo/weibo.png" style="width: 100%" >
-				<p>CSDN同步更新</p>
-				<img src="../imgs/logo/csdn.jpg" >
+			<div class="news_right_two" style="height: 210px;">
+				<h5>&nbsp;目录</h5>
+				<ul>
+					<a ytag="20054" href="#mk01"><li>效果实现描述</li></a>
+					<a ytag="20055" href="#mk02"><li>Code : HTML</li></a>
+					<a ytag="20056" href="#mk03"><li>Code : CSS</li></a>
+					<a ytag="20057" href="#mk04"><li>Code : JS</li></a>
+					<a ytag="20057" href="#mk05"><li>源码下载</li></a>
+					<a ytag="20057" href="#mk01"><li>返回顶部</li></a>
+				</ul>
 			</div>
 		</div>
 	</div>
 	
-	<footer class="bg-color" style="height: 60px;margin-top: 50px;">
+	
+	
+	<footer class="bg-color" style="height: 60px;margin-top: 190px;">
 		<div style="text-align: center;">
 			<p style="color: #FFFFFF;line-height: 60px;">Copyright © 2021 TianLan All Rights Reserved.</p>
 		</div>
 	</footer>
 </div>
 
-<script src="../libs/jquery/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="../libs/jquery/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script> -->
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="../js/maodian.js"></script>
 <script src="../js/guding.js" type="text/javascript" charset="utf-8"></script>
 
 <script src="../js/wow.min.js"></script>
 <script type="text/javascript">
 	new WOW().init();
 </script>
-
 <script src="../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/CodingDate.js" type="text/javascript" charset="utf-8"></script>
 </body>
