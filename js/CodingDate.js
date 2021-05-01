@@ -73,7 +73,7 @@ var app = new Vue({
 		cr() {
 			var a = window.location.href;
 			console.log(a);
-			var b = a.substr(59,4);
+			var b = a.substr(62,4);
 			console.log(b);
 			this.index_id = b;
 			console.log(this.index_id);
