@@ -116,7 +116,42 @@
 	
 	<div v-for="(item) in details_wz" v-if="index_id == item.id" class="news" style="margin: -140px auto;" id="mk01">
 		<!-- v-if,真的不显示，假的显示 -->
-		<div class="news_left wow bounceInUp">
+		<!-- A -->
+		<div v-if="item.question_type == 'A' " class="news_left wow bounceInUp">
+			<h2>{{ item.title }}</h2>
+			<hr/>
+			
+			<div class="content_head" >
+				<p>{{ item.content1 }}</p>
+			</div>
+			<div class="content_img">
+				<img src="../imgs/content-imgs/01.png" >
+				<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+			</div>
+			<!-- <h4>提出问题</h4> -->
+			<b class="paiban-p" id="mk02" v-if="item.img_title != '' ">
+				{{ item.img1_title }} <br>
+			</b>
+			{{ item.main1 }} <br>
+			<img v-bind:src="item.img1" style="width: 100%;"> <br>
+			<b class="paiban-p" id="mk03" v-if="item.img2_title != '' ">
+				{{ item.img2_title }} <br>
+			</b>
+			{{ item.main2 }} <br>
+			<img v-bind:src="item.img2" style="width: 100%;"> <br>
+			<b class="paiban-p" id="mk04" v-if="item.img3_title != '' ">
+				{{ item.img3_title }} <br>
+			</b>
+			{{ item.main3 }} <br>
+			<img v-bind:src="item.img3" style="width: 100%;"> <br>
+			<b class="paiban-p" id="mk04" v-if="item.img4_title != '' ">
+				{{ item.img4_title }} <br>
+			</b>
+			{{ item.main4 }} <br>
+			<img v-bind:src="item.img3" style="width: 100%;">
+		</div>
+		<!-- B -->
+		<div v-if="item.question_type == 'B' " class="news_left wow bounceInUp">
 			<h2>{{ item.title }}</h2>
 			<hr/>
 			
@@ -143,24 +178,135 @@
 			<p id="mk05">
 				<a v-bind:href="item.link" target="_blank">源码下载</a>
 			</p>
+		</div>
+		<!-- C -->
+		<div v-if="item.question_type == 'C' " class="news_left wow bounceInUp">
+			<h2>{{ item.title }}</h2>
+			<hr/>
 			
+			<div class="content_head" >
+				<p>{{ item.content1 }}</p>
+			</div>
+			<div class="content_img">
+				<img src="../imgs/content-imgs/01.png" >
+				<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+			</div>
+			<p v-for="(i,index) in item.question" class="paiban-p" id="mk02">
+				<b v-if="i.title != '' ">问题 {{ index + 1 }}: </b>{{ i.title }} <br>
+				<i style="color: #0091EA;" v-if="i.main != '' ">解决方法：{{ i.main }}</i> 
+					{{ i.img1_title }}
+				<img v-bind:src="i.img1" style="width: 100%;" v-if="i.img1 != '' "> 
+					{{ i.img2_title }}
+				<img v-bind:src="i.img2" style="width: 100%;" v-if="i.img2 != '' "> 
+			</p>
+			
+			<p id="mk05">
+				<!-- <a v-bind:href="item.link" target="_blank">源码下载</a> -->
+			</p>
+		</div>
+		<!-- D -->
+		<div v-if="item.question_type == 'D' " class="news_left wow bounceInUp">
+			<h2>{{ item.title }}</h2>
+			<hr/>
+			
+			<div class="content_head" >
+				<p>{{ item.content1 }}</p>
+			</div>
+			<div class="content_img">
+				<img src="../imgs/content-imgs/01.png" >
+				<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+			</div>
+			<h4>代码构建</h4>
+			<p class="paiban-p" id="mk02">
+				{{ item.img1_title }}
+			</p>
+			<img v-bind:src="item.img1" style="width: 100%;" v-if="item.img1 != '' ">
+			<p class="paiban-p" id="mk03">
+				{{ item.img2_title }}
+			</p>
+			<img v-bind:src="item.img2" style="width: 100%;" v-if="item.img2 != '' ">
+			<p class="paiban-p" id="mk04">
+				{{ item.img3_title }}
+			</p>
+			<img v-bind:src="item.img3" style="width: 100%;" v-if="item.img3 != '' ">
+			<p id="mk05">
+				<a v-bind:href="item.link1" target="_blank" v-if="item.link1 != '' ">源码下载</a>
+				<a v-bind:href="item.link2" target="_blank" v-if="item.link2 != '' ">官网链接</a>
+			</p>
+		</div>
+		<!-- E -->
+		<div v-if="item.question_type == 'E' " class="news_left wow bounceInUp">
+			<h2>{{ item.title }}</h2>
+			<hr/>
+			
+			<div class="content_head" >
+				<p>{{ item.content1 }}</p>
+			</div>
+			<div class="content_img">
+				<img src="../imgs/content-imgs/01.png" >
+				<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+			</div>
+			<p v-for="(i,index) in item.question" class="paiban-p" id="mk02" v-if="i.title != '' ">
+					{{ i.title }} <br>
+				<em style="color: #0091EA;font-size: 16px;">{{ i.main }}</em> <br>
+					<!-- {{ i.img1_title }} -->
+				<!-- <img v-bind:src="i.img1" style="width: 100%;" v-if="i.img1 != '' "> <br> -->
+					<!-- {{ i.img2_title }} -->
+				<!-- <img v-bind:src="i.img2" style="width: 100%;" v-if="i.img2 != '' "> -->
+			</p>
+			
+			<p id="mk05">
+				<!-- <a v-bind:href="item.link" target="_blank">源码下载</a> -->
+			</p>
 		</div>
 		<div id="div1" class="wow bounceInRight">
 			<div class="news_right">
 				<input type="text" placeholder="Search" style="float: left; width: 160px;border: 1px solid #989898; height: 34px; padding-left: 10px;">
-				<a href="search.html">
+				<a href="searchs.html">
 					<img style="float: left;height: 36px;cursor: pointer;" src="../imgs/tubiao/search.png">
 				</a>
 			</div>
-			<div class="news_right_two" style="height: 210px;">
+			<div class="news_right_two" style="height: ;">
 				<h5>&nbsp;目录</h5>
-				<ul>
+				<ul v-if="item.question_type == 'A' ">
+					<a ytag="20054" href="#mk01"><li>描述</li></a>
+					<a ytag="20055" href="#mk02"><li>提出问题</li></a>
+					<a ytag="20056" href="#mk03"><li>作出假设</li></a>
+					<a ytag="20057" href="#mk04"><li>设计实验验证</li></a>
+					<a ytag="20058" href="#mk05"><li>得出结论</li></a>
+					<a ytag="20059" href="#mk01"><li>返回顶部</li></a>
+				</ul>
+				<ul v-if="item.question_type == 'B' ">
 					<a ytag="20054" href="#mk01"><li>效果实现描述</li></a>
 					<a ytag="20055" href="#mk02"><li>Code : HTML</li></a>
 					<a ytag="20056" href="#mk03"><li>Code : CSS</li></a>
 					<a ytag="20057" href="#mk04"><li>Code : JS</li></a>
-					<a ytag="20057" href="#mk05"><li>源码下载</li></a>
-					<a ytag="20057" href="#mk01"><li>返回顶部</li></a>
+					<a ytag="20058" href="#mk05"><li>源码下载</li></a>
+					<a ytag="20059" href="#mk01"><li>返回顶部</li></a>
+				</ul>
+				<ul v-if="item.question_type == 'C' ">
+					<a ytag="20054" href="#mk01"><li>问题内容描述</li></a>
+					<a ytag="20055" href="#mk02"><li>问题排序</li></a>
+					<!-- <a ytag="20056" href="#mk03"><li>Code : CSS</li></a> -->
+					<!-- <a ytag="20057" href="#mk04"><li>Code : JS</li></a> -->
+					<!-- <a ytag="20058" href="#mk05"><li>源码下载</li></a> -->
+					<a ytag="20059" href="#mk01"><li>返回顶部</li></a>
+				</ul>
+				<ul v-if="item.question_type == 'D' ">
+					<a ytag="20054" href="#mk01"><li>推荐信息描述</li></a>
+					<a ytag="20055" href="#mk02"><li>内容</li></a>
+					<!-- <a ytag="20056" href="#mk03"><li>Code : CSS</li></a> -->
+					<!-- <a ytag="20057" href="#mk04"><li>Code : JS</li></a> -->
+					<a ytag="20058" href="#mk05"><li>官网链接</li></a>
+					<a ytag="20059" href="#mk01"><li>返回顶部</li></a>
+				</ul>
+				<ul v-if="item.question_type == 'E' ">
+					<a ytag="20054" href="#mk01"><li>信息描述</li></a>
+					<a ytag="20055" href="#mk02"><li>内容</li></a>
+					<!-- <a ytag="20056" href="#mk03"><li>Code : CSS</li></a> -->
+					<!-- <a ytag="20057" href="#mk04"><li>Code : JS</li></a> -->
+					<!-- <a ytag="20058" href="#mk05"><li>官网链接</li></a> -->
+					<a ytag="20059" href="#mk01"><li>返回顶部</li></a>
 				</ul>
 			</div>
 		</div>

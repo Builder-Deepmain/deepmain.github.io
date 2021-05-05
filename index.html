@@ -118,30 +118,32 @@
 
 <div class="news">
 	<div class="news_left">
-		<h2>GO 编程模式：K8S VISITOR 模式</h2>
+		<h2>网站性能优化的深度研究</h2>
 		<hr/>
 		
 		<div class="content_head">
 			<p>
-				本篇文章主要想讨论一下，Kubernetes 的 kubectl 命令中的使用到到的一个编程模式 – Visitor（注：其实，kubectl 主要使用到了两个一个是Builder，另一个是Visitor）。本来，Visitor 是面向对象设计模英中一个很重要的设计模款（参看Wikipedia Visitor Pattern词条），这个模式是一种将算法与操作对象的结构分离的一种方法。这种分离的实际结果是能够在不修改结构的情况下向现有对象结构添加新操作，是遵循开放/封闭原则的一种方法。这篇文章我们重点看一下 kubelet 中是怎么使用函数式的方法来实现这个模式的。
+				之前我们讲过对网站的文件资源进行优化（以网站的打开速度来作为参照），应该怎么来操作，所以我设计了这个实验，结论是压缩文件和资源的体积。根据我们之前的一篇帖子，从输入Url到页面加载显示完毕，中间这些过程，都是影响网页打开速度的因素
 			</p>
 		</div>
 		<div class="content_img">
 			<img src="imgs/content-imgs/01.png" >
 			<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
 		</div>
-		<h4>一个简单示例</h4>
+		<b>提出问题</b>
 		<p class="paiban-p">
-			我们还是先来看一个简单设计模式的Visitor的示例。
+			对文件资源进行什么样的操作才能优化这个网站？
 		</p>
-		<p class="paiban-p-shsj">
-			▲我们的代码中有一个Visitor的函数定义，还有一个Shape接口，其需要使用 Visitor函数做为参数。
+		<b>作出假设</b>
+		<p class="paiban-p">
+			压缩文件资源应该能够优化这个网站
 		</p>
-		<p class="paiban-p-shsj">
-			▲我们的实例的对象 Circle和 Rectangle实现了 Shape 的接口的 accept() 方法，这个方法就是等外面给我传递一个Visitor。
+		<b>设计实验验证</b>
+		<p class="paiban-p">
+			控制变量：同一个浏览器，同一个网络环境，同一个PC；对照组：在原来网站的基础上，对图片，CSS文件进行压缩过的网站，
 		</p>
 		......
-		<a href="./pages/details.html">
+		<a href="./pages/detailst.html?id=0009">
 			<h5>阅读全文</h5>
 		</a>
 	</div>
@@ -161,114 +163,97 @@
 		</div>
 	</div>
 	<div class="news_left" style="margin-top: 30px;">
-		<h2>GO 编程模式：K8S VISITOR 模式</h2>
+		<h2>企业中项目流程概括</h2>
 		<hr/>
 		
 		<div class="content_head">
 			<p>
-				本篇文章主要想讨论一下，Kubernetes 的 kubectl 命令中的使用到到的一个编程模式 – Visitor（注：其实，kubectl 主要使用到了两个一个是Builder，另一个是Visitor）。本来，Visitor 是面向对象设计模英中一个很重要的设计模款（参看Wikipedia Visitor Pattern词条），这个模式是一种将算法与操作对象的结构分离的一种方法。这种分离的实际结果是能够在不修改结构的情况下向现有对象结构添加新操作，是遵循开放/封闭原则的一种方法。这篇文章我们重点看一下 kubelet 中是怎么使用函数式的方法来实现这个模式的。
+				面试造火箭，工作拧螺丝！话虽这么说，但是了解知晓一个项目的全程，以及自己在这个项目中的位置是非常重要的一件事情，今天我以Web前端项目开发为准，进行一个全程的介绍
 			</p>
 		</div>
 		<div class="content_img">
 			<img src="imgs/content-imgs/01.png" >
 			<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
 		</div>
-		<h4>一个简单示例</h4>
+		<b>项目需求分析</b>
 		<p class="paiban-p">
-			我们还是先来看一个简单设计模式的Visitor的示例。
+			这个环节是由项目经理完成，项目经理首先和客户进行交流，了解客户的需求，然后分析项目的可行性，如果项目可以被实现，项目经理写出项目需求文档交给设计师完成后续的开发。
+		</p>
+		<b>页面设计/项目选型</b>
+		<p class="paiban-p">
+			这个环节主要是UI设计师参与，UI设计师根据产品需求分析文档，对产品的整体美术风格、交互设计、界面结构、操作流程等做出设计。负责项目中各种交互界面、图标、LOGO、按钮等相关元素的设计与制作。并且确定使用技术
 		</p>
 		<p class="paiban-p-shsj">
-			▲我们的代码中有一个Visitor的函数定义，还有一个Shape接口，其需要使用 Visitor函数做为参数。
-		</p>
-		<p class="paiban-p-shsj">
-			▲我们的实例的对象 Circle和 Rectangle实现了 Shape 的接口的 accept() 方法，这个方法就是等外面给我传递一个Visitor。
 		</p>
 		......
-		<a href="./pages/details.html">
+		<a href="./pages/detailst.html?id=0005">
 			<h5>阅读全文</h5>
 		</a>
 	</div>
 	<div class="news_left" style="margin-top: 30px;">
-		<h2>GO 编程模式：K8S VISITOR 模式</h2>
+		<h2>动画库wowjs的推荐使用</h2>
 		<hr/>
 		
 		<div class="content_head">
 			<p>
-				本篇文章主要想讨论一下，Kubernetes 的 kubectl 命令中的使用到到的一个编程模式 – Visitor（注：其实，kubectl 主要使用到了两个一个是Builder，另一个是Visitor）。本来，Visitor 是面向对象设计模英中一个很重要的设计模款（参看Wikipedia Visitor Pattern词条），这个模式是一种将算法与操作对象的结构分离的一种方法。这种分离的实际结果是能够在不修改结构的情况下向现有对象结构添加新操作，是遵循开放/封闭原则的一种方法。这篇文章我们重点看一下 kubelet 中是怎么使用函数式的方法来实现这个模式的。
+				如果你看到了这篇帖子，请你一定要去访问我的blog网站（或者是直接在我的blog中看到的），我在好几个页面中使用了wow.js，animate.css动画，使我的站点更加的awesome，接下来我来告诉你如何像我一样拥有如此炫酷的网站
 			</p>
 		</div>
 		<div class="content_img">
 			<img src="imgs/content-imgs/01.png" >
 			<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
 		</div>
-		<h4>一个简单示例</h4>
+		<b>代码构建</b>
 		<p class="paiban-p">
-			我们还是先来看一个简单设计模式的Visitor的示例。
+			在我们的页面中引入animate.css和wow.js文件
 		</p>
-		<p class="paiban-p-shsj">
-			▲我们的代码中有一个Visitor的函数定义，还有一个Shape接口，其需要使用 Visitor函数做为参数。
-		</p>
-		<p class="paiban-p-shsj">
-			▲我们的实例的对象 Circle和 Rectangle实现了 Shape 的接口的 accept() 方法，这个方法就是等外面给我传递一个Visitor。
-		</p>
+		<img src="imgs/details/0003/code.png" style="width: 100%;">
 		......
-		<a href="./pages/details.html">
+		<a href="./pages/detailst.html?id=0003">
 			<h5>阅读全文</h5>
 		</a>
 	</div>
 	<div class="news_left" style="margin-top: 30px;">
-		<h2>GO 编程模式：K8S VISITOR 模式</h2>
+		<h2>Vue使用中遇到的一些小问题汇总</h2>
 		<hr/>
 		
 		<div class="content_head">
-			<p>
-				本篇文章主要想讨论一下，Kubernetes 的 kubectl 命令中的使用到到的一个编程模式 – Visitor（注：其实，kubectl 主要使用到了两个一个是Builder，另一个是Visitor）。本来，Visitor 是面向对象设计模英中一个很重要的设计模款（参看Wikipedia Visitor Pattern词条），这个模式是一种将算法与操作对象的结构分离的一种方法。这种分离的实际结果是能够在不修改结构的情况下向现有对象结构添加新操作，是遵循开放/封闭原则的一种方法。这篇文章我们重点看一下 kubelet 中是怎么使用函数式的方法来实现这个模式的。
-			</p>
+			<p>Vue作为一款出色的前端框架，与AngleJS,React共称为前端三大框架。是我最喜欢的框架之一，在使用的过程中，遇到的问题，这里我专门开了个帖子，方便今后的学习和查询</p>
 		</div>
 		<div class="content_img">
 			<img src="imgs/content-imgs/01.png" >
 			<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
 		</div>
-		<h4>一个简单示例</h4>
+		<b>问题 1: 嵌套v-for怎么去使用</b>
 		<p class="paiban-p">
-			我们还是先来看一个简单设计模式的Visitor的示例。
+			解决方法：最重要的是，二级v-for，in后面的东西，是父级.子级，调用的时候直接和父级调用一样，特别注意，子级中每一项的名字 i,不能和父级 item一样
 		</p>
-		<p class="paiban-p-shsj">
-			▲我们的代码中有一个Visitor的函数定义，还有一个Shape接口，其需要使用 Visitor函数做为参数。
-		</p>
-		<p class="paiban-p-shsj">
-			▲我们的实例的对象 Circle和 Rectangle实现了 Shape 的接口的 accept() 方法，这个方法就是等外面给我传递一个Visitor。
-		</p>
+		
 		......
-		<a href="./pages/details.html">
+		<a href="./pages/detailst.html?id=0010">
 			<h5>阅读全文</h5>
 		</a>
 	</div>
 	<div class="news_left" style="margin-top: 30px;">
-		<h2>GO 编程模式：K8S VISITOR 模式</h2>
+		<h2>页面右侧固定导航栏实现</h2>
 		<hr/>
 		
 		<div class="content_head">
 			<p>
-				本篇文章主要想讨论一下，Kubernetes 的 kubectl 命令中的使用到到的一个编程模式 – Visitor（注：其实，kubectl 主要使用到了两个一个是Builder，另一个是Visitor）。本来，Visitor 是面向对象设计模英中一个很重要的设计模款（参看Wikipedia Visitor Pattern词条），这个模式是一种将算法与操作对象的结构分离的一种方法。这种分离的实际结果是能够在不修改结构的情况下向现有对象结构添加新操作，是遵循开放/封闭原则的一种方法。这篇文章我们重点看一下 kubelet 中是怎么使用函数式的方法来实现这个模式的。
+				在网站的布局中，有时候由于内容比较多，为了能够提高站点的可读性，我们一般会设置一个固定导航，它常常位于页面的右侧或者左侧，在那里固定显示，不随页面的上下滑动而移动，当页面滑动最上面的时候，它还能自己滑动回到原处，那如何才能实现呢？
 			</p>
 		</div>
 		<div class="content_img">
 			<img src="imgs/content-imgs/01.png" >
 			<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
 		</div>
-		<h4>一个简单示例</h4>
+		<b>代码实现</b>
 		<p class="paiban-p">
-			我们还是先来看一个简单设计模式的Visitor的示例。
+			HTML
 		</p>
-		<p class="paiban-p-shsj">
-			▲我们的代码中有一个Visitor的函数定义，还有一个Shape接口，其需要使用 Visitor函数做为参数。
-		</p>
-		<p class="paiban-p-shsj">
-			▲我们的实例的对象 Circle和 Rectangle实现了 Shape 的接口的 accept() 方法，这个方法就是等外面给我传递一个Visitor。
-		</p>
+		<img src="imgs/details/0002/html.png" style="width: 100%;">
 		......
-		<a href="./pages/details.html">
+		<a href="./pages/detailst.html?id=0002">
 			<h5>阅读全文</h5>
 		</a>
 	</div>

@@ -22,6 +22,7 @@
   
   <link rel="stylesheet" type="text/css" href="../css/element-ui.css">
   <link rel="stylesheet" type="text/css" href="../css/news.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
   <script src="../libs/jquery/jquery-2.2.0.min.js"></script>
 
 <body>
@@ -112,35 +113,26 @@
 
 
 <div class="news" style="margin-top: -140px;">
-	<div class="news_left">
-		<h2>Developer Community</h2>
-		<hr/>
+	<div class="news_left wow bounceInLeft" style="padding: 5px;background-color: #ECEFF1;box-shadow: none;">
+		<h2 style="text-align: left;font-size: 36px;">Nothing Found</h2>
 		
-		<p class="paiban-p">
-			<b>CSDN : </b> <a href="https://www.csdn.net/" target="_blank">https://www.csdn.net/</a> (常用) <br>
-			<b>开源中国 : </b> <a href="https://www.oschina.net/" target="_blank">https://www.oschina.net/</a> <br>
-			<b>GitHub : </b> <a href="https://github.com/" target="_blank">https://github.com/</a> <br>
-			<b>Gitee : </b> <a href="https://gitee.com/" target="_blank">https://gitee.com/</a> (常用)<br>
-			<b>菜鸟教程 : </b> <a href="https://www.runoob.com/" target="_blank">https://www.runoob.com/</a> <br>
-			<b>Google : </b> <a href="https://google.com/" target="_blank">https://google.com/</a> <br>
-			<b>BaiDu : </b> <a href="https://www.baidu.com/" target="_blank">https://www.baidu.com/</a> <br>
-			......
+		<p class="paiban-p" style="display:inline-block;margin-top: 10px;">
+			Sorry, nothing matched your search contents. Please try again with some other keywords.<br>
+			Go to the recommendation page to see more : <a href="recommend.html">recommend.html</a>
 		</p>
 	</div>
-	<div id="div1">
-		<div class="news_right">
-			<input type="text" placeholder="Search" style="float: left; width: 160px;border: 1px solid #989898; height: 34px; padding-left: 10px;">
-			<a href="searchs.html">
-				<img style="float: left;height: 36px;cursor: pointer;" src="../imgs/tubiao/search.png" >
-			</a>
-		</div>
-		<div class="news_right_two">
-			<h5>本站公告</h5>
-			<p>Weibo同步更新</p>
-			<img src="../imgs/logo/weibo.png" style="width: 100%" >
-			<p>CSDN同步更新</p>
-			<img src="../imgs/logo/csdn.jpg" >
-		</div>
+	<div class="news_right">
+		<input type="text" placeholder="Search" style="float: left; width: 160px;border: 1px solid #989898; height: 34px; padding-left: 10px;">
+		<a href="searchs.html">
+			<img style="float: left;height: 36px;cursor: pointer;" src="../imgs/tubiao/search.png" >
+		</a>
+	</div>
+	<div class="news_right_two">
+		<h5>本站公告</h5>
+		<p>Weibo同步更新</p>
+		<img src="../imgs/logo/weibo.png" style="width: 100%" >
+		<p>CSDN同步更新</p>
+		<img src="../imgs/logo/csdn.jpg" >
 	</div>
 </div>
 
@@ -150,9 +142,9 @@
 	</div>
 </footer>
 
-<script src="../libs/jquery/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="../js/guding.js" type="text/javascript" charset="utf-8"></script>
-
-</body>
+<script src="../js/wow.min.js"></script>
+<script type="text/javascript">
+	new WOW().init();
+</script>
 <!-- End of website body -->
 </html>
