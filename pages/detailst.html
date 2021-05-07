@@ -246,11 +246,14 @@
 				<img src="../imgs/content-imgs/01.png" >
 				<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
 			</div>
-			<p v-for="(i,index) in item.question" class="paiban-p" id="mk02" v-if="i.title != '' ">
+			<p v-for="(i,index) in item.duanluo" class="paiban-p" id="mk02" v-if="i.title != '' ">
 					{{ i.title }} <br>
-				<em style="color: #0091EA;font-size: 16px;">{{ i.main }}</em> <br>
+				<img v-bind:src="i.img" style="width: 100%;margin-top: 10px;" v-if="i.img1 != '' "> <br>
+				<em style="color: #0091EA;font-size: 16px;font-style:normal; color: #333;" v-if="i.main != '' ">{{ i.main }}</em> <br> <br>
+				<em style="color: #0091EA;font-size: 16px;font-style:normal;color: #333333;" v-if="i.main2 != '' ">{{ i.main2 }}</em> <br><br>
+				<em style="color: #0091EA;font-size: 16px;font-style:normal;color: #333333;" v-if="i.main3 != '' ">{{ i.main3 }}</em> <br>
+				
 					<!-- {{ i.img1_title }} -->
-				<!-- <img v-bind:src="i.img1" style="width: 100%;" v-if="i.img1 != '' "> <br> -->
 					<!-- {{ i.img2_title }} -->
 				<!-- <img v-bind:src="i.img2" style="width: 100%;" v-if="i.img2 != '' "> -->
 			</p>
