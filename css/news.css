@@ -52,7 +52,7 @@ body {
 	/* background-color: purple; */
 }
 .news_left .content_img img {
-	/* width: 100%; */
+	width: 100%;
 }
 .news_left .content_img p {
 	line-height: 0px;

@@ -3,6 +3,20 @@ var app = new Vue({
 	data: {
 		"details_wz":[
 			{
+				"id":'0012',
+				"time":'2020/12/26',
+				"title":'轮播图效果实现',
+				"question_type":'B',
+				"content1":'对于Web前端开发，最常规的一个组件效果，轮播图，我们每个人应该都不会陌生，但是如何实现这个功能效果呢？',
+				"img1_title":'HTML',
+				"img1":'../imgs/details/0012/html.png',
+				"img2_title":'CSS',
+				"img2":'../imgs/details/0012/css.png',
+				"img3_title":'JS',
+				"img3":'../imgs/details/0012/js.png',
+				"link":'https://gitee.com/Deepmain/realize/blob/master/%E9%94%9A%E7%82%B9%E6%B5%8B%E8%AF%95.html'
+			},
+			{
 				"id":'0011',
 				"time":'2020/12/26',
 				"title":'2021年1月编程语言排行榜：Python年度编程语言',
@@ -275,10 +289,10 @@ var app = new Vue({
 			console.log(a);
 			
 			// 正式运行用，加入gitee.com的域名
-			var b = a.substr(62,4);
+			// var b = a.substr(62,4);
 			
 			// 开发测试用，由于本地ip从59位开始才能获取到后4位id
-			// var b = a.substr(59,4);
+			var b = a.substr(59,4);
 			
 			console.log(b);
 			this.index_id = b;

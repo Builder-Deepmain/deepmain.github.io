@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            position: relative;
+			margin: 0 auto;
+            width: 1500px;
+            height: 700px;
+            z-index: 10000;
+        }
+        
+        div img {
+            position: absolute;
+            z-index: 10;
+            opacity: 0;
+            transition: all 0.5s ease;
+			width: 100%;
+        }
+        
+        div button {
+            width: 50px;
+			height: 100px;
+            position: absolute;
+            z-index: 1000;
+            top: 300px;
+            cursor: pointer
+        }
+        
+        #btnLeft {
+            left: 0;
+        }
+        
+        #btnRignt {
+            right: 0;
+        }
+        
+        .active {
+            z-index: 1000;
+            opacity: 1;
+        }
+        
+        ul {
+            position: absolute;
+            padding: 0;
+            list-style: none;
+            z-index: 1000;
+            right: 20px;
+            bottom: 20px;
+            cursor: pointer;
+        }
+        
+        li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 100%;
+            margin-right: 10px;
+            border: 2px solid black;
+        }
+        
+        .liwhite {
+            background-color: white
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div">
+        <img src="./imgs/1.webp" alt="" class="item active">
+        <img src="./imgs/2.webp" alt="" class="item">
+        <img src="./imgs/3.webp" alt="" class="item">
+        <img src="./imgs/4.webp" alt="" class="item">
+        <img src="./imgs/5.webp" alt="" class="item">
+        <button id="btnLeft"><</button>
+        <button id="btnRignt">></button>
+        <ul>
+            <li class="liwhite" data-index="0"></li>
+            <li data-index="1"></li>
+            <li data-index="2"></li>
+            <li data-index="3"></li>
+            <li data-index="4"></li>
+        </ul>
+    </div>
+	<center>图片来源：SpaceX官网</center>
+    <script>
+        var btnLeft = document.getElementById('btnLeft')
+        var btnRignt = document.getElementById('btnRignt')
+        var item = document.getElementsByClassName('item')
+        var li = document.getElementsByTagName('li')
+        var div = document.getElementById('div')
+        var index = 0
+
+        //移除所有的active项
+        function removeClassActive() {
+            for (var i = 0; i < item.length; i++) {
+                item[i].className = 'item'
+                li[i].className = ''
+            }
+        }
+        btnLeft.onclick = function() {
+            if (index <= 0) {
+                index = 5
+            }
+            index--
+            goindex()
+        }
+
+        function goindex() {
+            removeClassActive()
+            item[index].className = 'item active'
+            li[index].className = 'liwhite'
+        }
+        btnRignt.onclick = function() {
+            if (index >= 4) {
+                index = -1
+            }
+            index++
+            // console.log(li)
+            goindex()
+        }
+
+        function goindex1() {
+            if (index >= 4) {
+                index = -1
+            } else if (index < 0) {
+                index = 4
+            }
+            index++
+            goindex()
+        }
+
+        //给每一个li挂上一个点击事件
+
+        for (var i = 0; i < li.length; i++) {
+            li[i].addEventListener('click', function() {
+                // console.log(this.li.indexOf())
+                var point = this.getAttribute('data-index')
+                index = point
+                goindex()
+            })
+        }
+        // console.log(div)
+        var timer = setInterval(function() {
+            goindex1()
+                // 进入
+            div.onmouseenter = function() {
+                clearInterval(timer);
+            }
+        }, 1000);
+
+        // 移除
+        div.onmouseleave = function() {
+            clearInterval(timer);
+            timer = setInterval(function() {
+                goindex1()
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>

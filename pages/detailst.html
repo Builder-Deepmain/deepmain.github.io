@@ -125,8 +125,8 @@
 				<p>{{ item.content1 }}</p>
 			</div>
 			<div class="content_img">
-				<img src="../imgs/content-imgs/01.png" >
-				<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+				<img src="../imgs/details/title_imgs/A.jpg" >
+				<p>图片来源：<a href="https://www.baidu.com">imagebaidu</a></p>
 			</div>
 			<!-- <h4>提出问题</h4> -->
 			<b class="paiban-p" id="mk02" v-if="item.img_title != '' ">
@@ -159,8 +159,8 @@
 				<p>{{ item.content1 }}</p>
 			</div>
 			<div class="content_img">
-				<img src="../imgs/content-imgs/01.png" >
-				<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+				<img src="../imgs/details/title_imgs/B.jpg" >
+				<p>图片来源：<a href="https://www.baidu.com">imagebaidu</a></p>
 			</div>
 			<h4>代码实现</h4>
 			<p class="paiban-p" id="mk02">
@@ -188,8 +188,8 @@
 				<p>{{ item.content1 }}</p>
 			</div>
 			<div class="content_img">
-				<img src="../imgs/content-imgs/01.png" >
-				<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+				<img src="../imgs/details/title_imgs/C.jpg" >
+				<p>图片来源：<a href="https://www.baidu.com">imagebaidu</a></p>
 			</div>
 			<p v-for="(i,index) in item.question" class="paiban-p" id="mk02">
 				<b v-if="i.title != '' ">问题 {{ index + 1 }}: </b>{{ i.title }} <br>
@@ -213,8 +213,8 @@
 				<p>{{ item.content1 }}</p>
 			</div>
 			<div class="content_img">
-				<img src="../imgs/content-imgs/01.png" >
-				<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+				<img src="../imgs/details/title_imgs/D.jpg" >
+				<p>图片来源：<a href="https://www.baidu.com">imagebaidu</a></p>
 			</div>
 			<h4>代码构建</h4>
 			<p class="paiban-p" id="mk02">
@@ -243,15 +243,15 @@
 				<p>{{ item.content1 }}</p>
 			</div>
 			<div class="content_img">
-				<img src="../imgs/content-imgs/01.png" >
-				<p>图片来源：<a href="https://www.baidu.com">GopherSource</a></p>
+				<img src="../imgs/details/title_imgs/E.jpg" >
+				<p>图片来源：<a href="https://www.baidu.com">imagebaidu</a></p>
 			</div>
 			<p v-for="(i,index) in item.duanluo" class="paiban-p" id="mk02" v-if="i.title != '' ">
-					{{ i.title }} <br>
-				<img v-bind:src="i.img" style="width: 100%;margin-top: 10px;" v-if="i.img1 != '' "> <br>
-				<em style="color: #0091EA;font-size: 16px;font-style:normal; color: #333;" v-if="i.main != '' ">{{ i.main }}</em> <br> <br>
-				<em style="color: #0091EA;font-size: 16px;font-style:normal;color: #333333;" v-if="i.main2 != '' ">{{ i.main2 }}</em> <br><br>
-				<em style="color: #0091EA;font-size: 16px;font-style:normal;color: #333333;" v-if="i.main3 != '' ">{{ i.main3 }}</em> <br>
+					<b>{{ i.title }}</b> <br>
+				<img v-bind:src="i.img" style="width: 100%;margin-top: 15px;" v-if="i.img1 != '' "> <br>
+				<em style="color: #0091EA;font-size: 16px;font-style:normal;color: #333333;" >{{ i.main }}</em> <br>
+				<em style="color: #0091EA;font-size: 16px;font-style:normal;color: #333333;" >{{ i.main2 }}</em> <br>
+				<em style="color: #0091EA;font-size: 16px;font-style:normal;color: #333333;" >{{ i.main3 }}</em> 
 				
 					<!-- {{ i.img1_title }} -->
 					<!-- {{ i.img2_title }} -->
