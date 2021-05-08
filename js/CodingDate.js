@@ -3,6 +3,21 @@ var app = new Vue({
 	data: {
 		"details_wz":[
 			{
+				"id":'0013',
+				"time":'2020/12/26',
+				"title":'代码贴图Carbon工具的推荐使用',
+				"question_type":'D',
+				"content1":'如果你和我一样喜欢没事写个博客，发个帖子，贴代码一定是你最想做的事情，可是不美观，界面不好看，那么Carbon这个工具你一定要尝试下，我的整个博客贴代码都是靠它完成的！',
+				"img1_title":"浏览器访问：打开https://carbon.now.sh/，这是一个单页面应用，不需要下载任何东西", 
+				"img1":'../imgs/details/0013/1.png',
+				"img2_title":'将你要贴的代码直接复制粘贴到它的编辑器中即可。你可以设置你的代码样式，背景颜色等等，最后导出图片即可，自己可以慢慢摸索',
+				"img2":'',
+				"img3_title":'代码格式化快捷键，Tab：缩进，Tab+Shift:反向缩进',
+				"img3":'',
+				"link1":'',
+				"link2":'https://carbon.now.sh/'
+			},
+			{
 				"id":'0012',
 				"time":'2020/12/26',
 				"title":'轮播图效果实现',
@@ -240,7 +255,7 @@ var app = new Vue({
 				"title":'动画库wowjs的推荐使用',
 				"question_type":'D',
 				"content1":'如果你看到了这篇帖子，请你一定要去访问我的blog网站（或者是直接在我的blog中看到的），我在好几个页面中使用了wow.js，animate.css动画，使我的站点更加的awesome，接下来我来告诉你如何像我一样拥有如此炫酷的网站',
-				"img1_title":"在我们的页面中引入animate.css和wow.js文件", 
+				"img1_title":"代码构建：在我们的页面中引入animate.css和wow.js文件", 
 				"img1":'../imgs/details/0003/code.png',
 				"img2_title":'注意在要实现效果的元素中添加类名 wow bounceInUp，根据类名的不同显示不同的效果，类似Bootstrap',
 				"img2":'',
