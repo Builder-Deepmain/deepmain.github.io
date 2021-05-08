@@ -14,7 +14,7 @@ var app = new Vue({
 				"img2":'../imgs/details/0012/css.png',
 				"img3_title":'JS',
 				"img3":'../imgs/details/0012/js.png',
-				"link":'https://gitee.com/Deepmain/realize/blob/master/%E9%94%9A%E7%82%B9%E6%B5%8B%E8%AF%95.html'
+				"link":'https://gitee.com/Deepmain/TianLanCoding/blob/master/Test/%E8%BD%AE%E6%92%AD%E5%9B%BE.html'
 			},
 			{
 				"id":'0011',
@@ -289,10 +289,10 @@ var app = new Vue({
 			console.log(a);
 			
 			// 正式运行用，加入gitee.com的域名
-			// var b = a.substr(62,4);
+			var b = a.substr(62,4);
 			
 			// 开发测试用，由于本地ip从59位开始才能获取到后4位id
-			var b = a.substr(59,4);
+			// var b = a.substr(59,4);
 			
 			console.log(b);
 			this.index_id = b;
