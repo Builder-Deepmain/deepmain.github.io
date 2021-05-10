@@ -15,7 +15,7 @@ var app = new Vue({
 				"img2":'../imgs/details/0015/css.png',
 				"main2":'',
 				"img3_title":'实现效果',
-				"img3":'../imgs/details/0015/realize.png',
+				"img3":'../imgs/details/0015/r.png',
 				"main3":'',
 				"link":'https://gitee.com/Deepmain/TianLanCoding/blob/master/Test/%E9%A1%B6%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F.html'
 			},
