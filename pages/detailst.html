@@ -14,7 +14,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>天蓝 – Coding.com</title>
+  <title>天蓝 – Coding.com | 详情页</title>
   <link rel="icon" type="image/png" href="../favicon.ico">
   
   
@@ -26,7 +26,7 @@
   <link rel="stylesheet" type="text/css" href="../css/news.css"/>
   <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
   <script src="../libs/jquery/jquery-2.2.0.min.js"></script>
-
+</head>
 <body>
 <div id="app">
 	<!-- Start of website body -->
@@ -166,15 +166,18 @@
 			<p class="paiban-p" id="mk02">
 				{{ item.img1_title }}
 			</p>
-			<img v-bind:src="item.img1" style="width: 100%;">
-			<p class="paiban-p" id="mk03" v-if="item.img2 != '' ">
+			<img v-bind:src="item.img1" style="width: 100%;" v-if="item.img1 != '' ">
+			<p v-if="item.main1 != '' ">{{ item.main1 }}</p>
+			<p class="paiban-p" id="mk03">
 				{{ item.img2_title }}
 			</p>
-			<img v-bind:src="item.img2" style="width: 100%;">
+			<img v-bind:src="item.img2" style="width: 100%;" v-if="item.img2 != '' ">
+			<p v-if="item.main2 != '' ">{{ item.main2 }}</p>
 			<p class="paiban-p" id="mk04">
 				{{ item.img3_title }}
 			</p>
-			<img v-bind:src="item.img3" style="width: 100%;">
+			<img v-bind:src="item.img3" style="width: 100%;" v-if="item.img3 != '' ">
+			<p v-if="item.main3 != '' ">{{ item.main3 }}</p>
 			<p id="mk05">
 				<a v-bind:href="item.link" target="_blank">源码下载</a>
 			</p>

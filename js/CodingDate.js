@@ -3,6 +3,40 @@ var app = new Vue({
 	data: {
 		"details_wz":[
 			{
+				"id":'0015',
+				"time":'2020/12/26',
+				"title":'顶部导航栏的实现',
+				"question_type":'B',
+				"content1":'对于Web前端开发，最常规的一个组件效果，导航栏，我们每个人应该都不会陌生，但是如何实现这个功能效果呢？',
+				"img1_title":'HTML',
+				"img1":'../imgs/details/0015/html.png',
+				"main1":'',
+				"img2_title":'CSS',
+				"img2":'../imgs/details/0015/css.png',
+				"main2":'',
+				"img3_title":'实现效果',
+				"img3":'../imgs/details/0015/realize.png',
+				"main3":'',
+				"link":'https://gitee.com/Deepmain/TianLanCoding/blob/master/index.html'
+			},
+			{
+				"id":'0014',
+				"time":'2020/12/26',
+				"title":'移动端打开网站跳转到对于的页面',
+				"question_type":'B',
+				"content1":'对于跨端开发中，为了用户体验，我们常采用响应式布局和移动端页面独立开发两种方式，对于后者，我们在移动端访问站点，根据设备的不同，如何自动跳转到移动端页面呢？',
+				"img1_title":'',
+				"img1":'',
+				"main1":'',
+				"img2_title":'',
+				"img2":'',
+				"main2":'',
+				"img3_title":'JS',
+				"img3":'../imgs/details/0014/js.png',
+				"main3":'将这个代码块添加到<head></head>中，当页面渲染时，首先读到这块代码。当然你也要准备好你移动端的页面，流式布局，百分比布局，都可以的！',
+				"link":'https://gitee.com/Deepmain/TianLanCoding/blob/master/index.html'
+			},
+			{
 				"id":'0013',
 				"time":'2020/12/26',
 				"title":'代码贴图Carbon工具的推荐使用',
@@ -244,8 +278,9 @@ var app = new Vue({
 						"main":"先将远程仓库pull到本地，再重新push即可",
 					},
 					{
-						"title":'Helloworld',
-						"main":"gitee",
+						"title":'git与gitee(github)多人协作',
+						"img1":'../imgs/details/0004/1.png',
+						"main":"创建，克隆，拉取，推送",
 					},
 				],
 			},
@@ -304,10 +339,10 @@ var app = new Vue({
 			console.log(a);
 			
 			// 正式运行用，加入gitee.com的域名
-			var b = a.substr(62,4);
+			// var b = a.substr(62,4);
 			
 			// 开发测试用，由于本地ip从59位开始才能获取到后4位id
-			// var b = a.substr(59,4);
+			var b = a.substr(59,4);
 			
 			console.log(b);
 			this.index_id = b;
