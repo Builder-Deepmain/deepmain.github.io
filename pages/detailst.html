@@ -173,11 +173,19 @@
 			</p>
 			<img v-bind:src="item.img2" style="width: 100%;" v-if="item.img2 != '' ">
 			<p v-if="item.main2 != '' ">{{ item.main2 }}</p>
+			
 			<p class="paiban-p" id="mk04">
 				{{ item.img3_title }}
 			</p>
 			<img v-bind:src="item.img3" style="width: 100%;" v-if="item.img3 != '' ">
 			<p v-if="item.main3 != '' ">{{ item.main3 }}</p>
+			
+			<p class="paiban-p" id="mk04">
+				{{ item.img4_title }}
+			</p>
+			<img v-bind:src="item.img4" style="width: 100%;" v-if="item.img4 != '' ">
+			<p v-if="item.main4 != '' ">{{ item.main4 }}</p>
+			
 			<p id="mk05">
 				<a v-bind:href="item.link" target="_blank">源码下载</a>
 			</p>

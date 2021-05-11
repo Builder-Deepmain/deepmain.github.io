@@ -9,15 +9,18 @@ var app = new Vue({
 				"question_type":'B',
 				"content1":'对于数据驱动的页面，循环遍历就显得特别重要了，我们把页面中相同的部分抽离出来，以数据的形式存储，然后设置一个UI，在对应的数据显示位置，显示对于的数据',
 				"img1_title":'HTML',
-				"img1":'../imgs/details/0015/html.png',
+				"img1":'../imgs/details/0016/html.png',
 				"main1":'',
 				"img2_title":'CSS',
-				"img2":'../imgs/details/0015/css.png',
+				"img2":'../imgs/details/0016/css.png',
 				"main2":'',
-				"img3_title":'实现效果',
-				"img3":'../imgs/details/0015/r.png',
+				"img3_title":'JS',
+				"img3":'../imgs/details/0016/js.png',
 				"main3":'',
-				"link":'https://gitee.com/Deepmain/TianLanCoding/blob/master/Test/%E9%A1%B6%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F.html'
+				"img4_title":'实现效果',
+				"img4":'../imgs/details/0016/r.png',
+				"main4":'',
+				"link":'https://gitee.com/Deepmain/TianLanCoding/blob/master/Test/Vue%E4%B8%ADv-for%E5%BE%AA%E7%8E%AF%E9%81%8D%E5%8E%86%E7%9A%84%E4%BD%BF%E7%94%A8.html'
 			},
 			{
 				"id":'0015',
@@ -356,10 +359,10 @@ var app = new Vue({
 			console.log(a);
 			
 			// 正式运行用，加入gitee.com的域名
-			var b = a.substr(62,4);
+			// var b = a.substr(62,4);
 			
 			// 开发测试用，由于本地ip从59位开始才能获取到后4位id
-			// var b = a.substr(59,4);
+			var b = a.substr(59,4);
 			
 			console.log(b);
 			this.index_id = b;
