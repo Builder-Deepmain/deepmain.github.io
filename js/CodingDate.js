@@ -3,6 +3,23 @@ var app = new Vue({
 	data: {
 		"details_wz":[
 			{
+				"id":'0016',
+				"time":'2020/12/26',
+				"title":'Vue中v-for循环遍历的使用',
+				"question_type":'B',
+				"content1":'对于数据驱动的页面，循环遍历就显得特别重要了，我们把页面中相同的部分抽离出来，以数据的形式存储，然后设置一个UI，在对应的数据显示位置，显示对于的数据',
+				"img1_title":'HTML',
+				"img1":'../imgs/details/0015/html.png',
+				"main1":'',
+				"img2_title":'CSS',
+				"img2":'../imgs/details/0015/css.png',
+				"main2":'',
+				"img3_title":'实现效果',
+				"img3":'../imgs/details/0015/r.png',
+				"main3":'',
+				"link":'https://gitee.com/Deepmain/TianLanCoding/blob/master/Test/%E9%A1%B6%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F.html'
+			},
+			{
 				"id":'0015',
 				"time":'2020/12/26',
 				"title":'顶部导航栏的实现',
@@ -15,7 +32,7 @@ var app = new Vue({
 				"img2":'../imgs/details/0015/css.png',
 				"main2":'',
 				"img3_title":'实现效果',
-				"img3":'../imgs/details/0015/realize.png',
+				"img3":'../imgs/details/0015/r.png',
 				"main3":'',
 				"link":'https://gitee.com/Deepmain/TianLanCoding/blob/master/Test/%E9%A1%B6%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F.html'
 			},

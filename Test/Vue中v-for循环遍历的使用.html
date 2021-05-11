@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			ul li {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<h3>目录</h3>
+			<ul v-for="(item) in content">
+				<li>{{ item.day }} <b>{{ item.title }}</b></li>
+			</ul>
+		</div>
+		<script src="./js/vue.min.js"></script>
+		<script type="text/javascript">
+			var app = new Vue({
+				el:'#app',
+				data: {
+					"content":[
+						{
+							"day":'2020/12/26',
+							"title":'Vue中v-for循环遍历的使用',
+						},
+						{
+							"day":'2020/12/26',
+							"title":'顶部导航栏的实现',
+						},
+						{
+							"day":'2020/12/26',
+							"title":'移动端打开网站跳转到对于的页面',
+						},
+						{
+							"day":'2020/12/26',
+							"title":'代码贴图Carbon工具的推荐使用',
+						},
+					]
+				}
+			});
+		</script>
+	</body>
+</html>
