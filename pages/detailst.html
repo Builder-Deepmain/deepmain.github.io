@@ -187,7 +187,8 @@
 			<p v-if="item.main4 != '' ">{{ item.main4 }}</p>
 			
 			<p id="mk05">
-				<a v-bind:href="item.link" target="_blank">源码下载</a>
+				<a v-bind:href="item.link" target="_blank">源码下载</a> 
+				<i style="font-style: normal;font-size: 10px;color: red;">（提示：打开后如果没看到源代码，请刷新页面）</i>
 			</p>
 		</div>
 		<!-- C -->
@@ -240,6 +241,12 @@
 				{{ item.img3_title }}
 			</p>
 			<img v-bind:src="item.img3" style="width: 100%;" v-if="item.img3 != '' ">
+			
+			<p class="paiban-p" id="mk04">
+				{{ item.img4_title }}
+			</p>
+			<img v-bind:src="item.img4" style="width: 100%;" v-if="item.img4 != '' ">
+			
 			<p id="mk05">
 				<a v-bind:href="item.link1" target="_blank" v-if="item.link1 != '' ">源码下载</a>
 				<a v-bind:href="item.link2" target="_blank" v-if="item.link2 != '' ">官网链接</a>
