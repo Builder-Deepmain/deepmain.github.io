@@ -3,6 +3,23 @@ var app = new Vue({
 	data: {
 		"details_wz":[
 			{
+				"id":'0020',
+				"time":'2020/12/26',
+				"title":'Chrome开发者工具的使用技巧',
+				"question_type":'D',
+				"content1":'Chrome的开发者工具是个很强大的东西，相信程序员们都不会陌生，不过有些小功能可能并不为大众所知，所以，写下这篇文章罗列一下可能你所不知道的功能，有的功能可能会比较实用，有的则不一定，也欢迎大家补充交流。',
+				"img1_title":"代码格式化", 
+				"img1":'',
+				"img2_title":'有很多css/js的代码都会被压缩掉，你可以点击代码窗口左下角的那个 { }  标签，chrome会帮你给格式化掉。',
+				"img2":'../imgs/details/0020/1.png',
+				"img3_title":'直接编辑网页',
+				"img3":'',
+				"img4_title":'在你的 console 里 输入下面的命令：document.designMode = "on" ,于是你就可以直接修改网页上的内容了。 ',
+				"img4":'../imgs/details/0020/2.png',
+				"link1":'',
+				"link2":'https://www.bitbug.net/'
+			},
+			{
 				"id":'0019',
 				"time":'2020/12/26',
 				"title":'网站favicon图标的制作工具',
@@ -11,9 +28,9 @@ var app = new Vue({
 				"img1_title":"我们要用到两个工具：PS，比特虫", 
 				"img1":'',
 				"img2_title":'1.在PS中新建64px X 64px的模板，添加背景色、字符和图案等设计自己的图标，并以jpeg格式保存',
-				"img2":'../imgs/details/0018/1.png',
+				"img2":'../imgs/details/0019/1.png',
 				"img3_title":'2.打开https://www.bitbug.net/ 比特虫网站，导入设计好的jpeg格式的图片，目标尺寸可以随意选择，一般选择48 x 48，最后点击生成ico图标即可',
-				"img3":'../imgs/details/0018/2.png',
+				"img3":'../imgs/details/0019/2.png',
 				"img4_title":'提示：在需要引入图标的页面代码<head></head>中加入<link rel="shortcut icon" href=" /favicon.ico" /> 注意图标的存放目录，写法和img的src一样',
 				"img4":'',
 				"link1":'',
@@ -26,11 +43,11 @@ var app = new Vue({
 				"question_type":'D',
 				"content1":'为了在软件产品生命周期中更好的沟通和标记，我们应该对APP、软件的版本号命名的规范和原则有一定的了解。 ',
 				"img1_title":"一、软件版本号由四部分组成：", 
-				"img1":'../imgs/details/0017/1.png',
+				"img1":'../imgs/details/0018/1.png',
 				"img2_title":'备注：',
-				"img2":'../imgs/details/0017/3.png',
+				"img2":'../imgs/details/0018/3.png',
 				"img3_title":'二、规则',
-				"img3":'../imgs/details/0017/2.png',
+				"img3":'../imgs/details/0018/2.png',
 				"img4_title":'注意：版本一经发布，不得修改其内容，任何修改必须在新版本发布',
 				"img4":'',
 				"link1":'',
@@ -391,11 +408,11 @@ var app = new Vue({
 				"question_type":'B',
 				"content1":'在网站的文段排版中，有时候由于篇幅比较长，为了能够提高文章的可读性，我们一般会设置一个目录导航，那如何才能实现呢？传统的办法是：给一个锚点链接！这种方式呢！实现了想要的效果，但是没有特别高的用户体验，如果能够从文章的一个地方滑动另外一个地方，能够表现出这个过程，就会有更好的用户体验。今天我给大家分享一下这个锚点导航滑动效果。',
 				"img1_title":'HTML',
-				"img1":'../imgs/details/200429/html.png',
+				"img1":'../imgs/details/0001/html.png',
 				"img2_title":'CSS',
-				"img2":'../imgs/details/200429/css.png',
+				"img2":'../imgs/details/0001/css.png',
 				"img3_title":'JS',
-				"img3":'../imgs/details/200429/js.png',
+				"img3":'../imgs/details/0001/js.png',
 				"link":'https://gitee.com/Deepmain/realize/blob/master/%E9%94%9A%E7%82%B9%E6%B5%8B%E8%AF%95.html'
 			},
 		],
@@ -410,10 +427,10 @@ var app = new Vue({
 			console.log(a);
 			
 			// 正式运行用，加入gitee.com的域名
-			var b = a.substr(62,4);
+			// var b = a.substr(62,4);
 			
 			// 开发测试用，由于本地ip从59位开始才能获取到后4位id
-			// var b = a.substr(59,4);
+			var b = a.substr(59,4);
 			
 			console.log(b);
 			this.index_id = b;
