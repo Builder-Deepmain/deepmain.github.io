@@ -15,6 +15,11 @@
 		// $("#searchIcon1").text('浅色主题');
 		// 将#searchIcon2内容设置为深色主题
 		// $("#searchIcon2").text('深色主题');
+		
+		// 隐藏深色主题id,显示浅色主题id
+		$('#searchIcon1').css("display","none");
+		$('#searchIcon2').css("display","block");
+		
 		$("body").addClass("one");
 		$(".news_left").addClass("two");
 		$(".news_right").addClass("two");
@@ -35,6 +40,11 @@
 	
 	if (mydate.getHours() <= 9) {
 		console.log("深色主题启用");
+		
+		// 隐藏深色主题id,显示浅色主题id
+		$('#searchIcon1').css("display","none");
+		$('#searchIcon2').css("display","block");
+		
 		$("body").addClass("one");
 		$(".news_left").addClass("two");
 		$(".news_right").addClass("two");
@@ -125,5 +135,11 @@
 	})
 	
 	// 获得#searchIcon1,2，得知当前什么主题
-	console.log('当前主题为：' + $('#searchIcon2').text());
-	console.log('当前主题为：' + $('#searchIcon1').text());
+	// console.log('当前主题为：' + $('#searchIcon2').text());
+	// console.log('当前主题为：' + $('#searchIcon1').text());
+	
+	// 当时间为9-18时，隐藏浅色id，显示深色id
+	if (9 < mydate.getHours() < 18 ) {
+		$('#searchIcon1').css("display","block");
+		$('#searchIcon2').css("display","none");
+	}

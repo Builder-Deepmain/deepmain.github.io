@@ -39,6 +39,20 @@
 				list-style: inside;
 				font-size: 32px;
 			}
+			/* 深色主题 */
+			/* body */
+			.one{
+				background-color: rgba(37,61,82,.95)!important; 
+			}
+			/* .news_left */
+			.two {
+				background-color: rgba(22,32,45,.5)!important;
+				box-shadow: 0 0 5px rgba(22,32,45,.5)!important;
+			}
+			/* font */
+			.end{
+				color: #fff!important;
+			}
 		</style>
 	</head>
 	<body>
@@ -51,11 +65,31 @@
 				<li>Hi,欢迎访问天蓝的Blog.</li>
 				<li>本站点由于移动端浏览效果不佳，暂时还在优化中.</li>
 				<li>请在PC端访问我们.</li>
+				<li>http://deepmain.gitee.io/tianlancoding/</li>
 			</ul>
 		</div>
 	</body>
 	<script src="../js/wow.min.js"></script>
 	<script type="text/javascript">
 		new WOW().init();
+	</script>
+	<script src="../Test/js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		// 获取时间
+		var mydate = new Date();
+		var str = "" + mydate.getFullYear() + "年";
+		str += (mydate.getMonth()+1) + "月";
+		str += mydate.getDate() + "日";
+		str += mydate.getHours() + "点";
+		str += mydate.getMinutes() + "分";
+		str += mydate.getSeconds() + "秒";
+		console.log(str);
+		// 当时间为18：00 —— 9：00 ,主题颜色为深色
+		if (mydate.getHours() >= 18) {
+			console.log("深色主题启用");
+			$("body").addClass("one");
+			$(".header").addClass("two");
+			$("ul li").addClass("end");
+		}
 	</script>
 </html>

@@ -26,6 +26,7 @@
   <link rel="stylesheet" type="text/css" href="css/DarkThemeClick.css"/>
   <!-- 浅色主题 -->
   <link rel="stylesheet" type="text/css" href="css/LightColorThemeClick.css"/>
+  
   <link rel="stylesheet" type="text/css" href="./css/element-ui.css">
   <link rel="stylesheet" type="text/css" href="css/news.css"/>
   <link rel="stylesheet" type="text/css" href="css/animate.css"/>
@@ -341,6 +342,11 @@
 		
 		if (mydate.getHours() >= 18) {
 			console.log("深色主题启用");
+			
+			// 隐藏深色主题id,显示浅色主题id
+			$('#searchIcon1').css("display","none");
+			$('#searchIcon2').css("display","block");
+			
 			$("body").addClass("one");
 			$(".news_left").addClass("two");
 			$(".news_right").addClass("two");
@@ -361,6 +367,11 @@
 		
 		if (mydate.getHours() < 9) {
 			console.log("深色主题启用");
+			
+			// 隐藏深色主题id,显示浅色主题id
+			$('#searchIcon1').css("display","none");
+			$('#searchIcon2').css("display","block");
+			
 			$("body").addClass("one");
 			$(".news_left").addClass("two");
 			$(".news_right").addClass("two");

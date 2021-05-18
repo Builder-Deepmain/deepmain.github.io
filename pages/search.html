@@ -19,7 +19,12 @@
 
   <link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
   
+  <!-- 深色主题 -->
   <link rel="stylesheet" type="text/css" href="../css/DarkTheme.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/DarkThemeClick.css"/>
+  <!-- 浅色主题 -->
+  <link rel="stylesheet" type="text/css" href="../css/LightColorThemeClick.css"/>
+  
   <link rel="stylesheet" type="text/css" href="../css/element-ui.css">
   <link rel="stylesheet" type="text/css" href="../css/news.css"/>
   <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
@@ -84,7 +89,8 @@
 				
 				<li>
 					<a href="#searchModal" class="modal-trigger waves-effect waves-light">
-						<!-- <i id="searchIcon" class="fa fa-search" title="搜索"></i> -->
+						<i id="searchIcon1" class="fa fa-search" style="font-size: 14px;" title="切换页面主题">深色主题</i>
+						<i id="searchIcon2" class="fa fa-search" style="font-size: 14px;display: none;" title="切换页面主题">浅色主题</i>
 					</a>
 				</li>
 			</ul>
@@ -147,5 +153,6 @@
 
 <script src="../js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/DarkTheme.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/ThemeToggle.js" type="text/javascript" charset="utf-8"></script>
 <!-- End of website body -->
 </html>
