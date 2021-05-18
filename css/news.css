@@ -1,6 +1,9 @@
 body {
 	background-color: #ECEFF1;
 }
+#headNav {
+	background-color: #1DA7DA!important;
+}
 .news {
 	overflow: hidden;
 	margin: 15px auto;

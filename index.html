@@ -21,7 +21,11 @@
 
   <link rel="stylesheet" type="text/css" href="./libs/materialize/materialize.min.css">
   
-  
+  <!-- 深色主题 -->
+  <link rel="stylesheet" type="text/css" href="css/DarkTheme.css"/>
+  <link rel="stylesheet" type="text/css" href="css/DarkThemeClick.css"/>
+  <!-- 浅色主题 -->
+  <link rel="stylesheet" type="text/css" href="css/LightColorThemeClick.css"/>
   <link rel="stylesheet" type="text/css" href="./css/element-ui.css">
   <link rel="stylesheet" type="text/css" href="css/news.css"/>
   <link rel="stylesheet" type="text/css" href="css/animate.css"/>
@@ -32,12 +36,44 @@
 			window.location.href ="./mobile/m_index.html";//手机
 		}
 	</script>
+	<!-- 深色主题 -->
+	<style type="text/css">
+		/* body {
+			background-color: rgba(37,61,82,.95)!important; 
+		}
+		.news_left {
+			background-color: rgba(22,32,45,.5)!important;
+			box-shadow: 0 0 5px rgba(22,32,45,.5)!important;
+		}
+		.news_right {
+			background-color: rgba(22,32,45,.5)!important;
+			box-shadow: 0 0 5px rgba(22,32,45,.5)!important;
+		}
+		.news_right_two {
+			background-color: rgba(22,32,45,.5)!important;
+			box-shadow: 0 0 5px rgba(22,32,45,.5)!important;
+		} */
+		
+		/* #headNav {
+			background-color: rgba(27,40,56)!important;
+		} */
+		
+		/* footer {
+			background-color: rgba(0,0,0,.5)!important;
+		}
+		.about-cover {
+		    background-color: rgba(27,40,56)!important;
+		}
+		h2,h4,p,b {
+			color: #fff!important;
+		} */
+	</style>
 </head>
 <body>
 
 <!-- Start of website body -->
 <header class="navbar-fixed">
-    <nav id="headNav" class="bg-color nav-transparent headbar-cover" style="background-color: #1DA7DA!important;">
+    <nav id="headNav" class="bg-color nav-transparent headbar-cover" style="background-color: rgba(29,167,218,.5)!important;">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo  wow bounceInDown">
                 <a href="index.html" class="waves-effect waves-light">
@@ -92,7 +128,8 @@
 				
 				<li>
 					<a href="#searchModal" class="modal-trigger waves-effect waves-light">
-						<!-- <i id="searchIcon" class="fa fa-search" title="搜索"></i> -->
+						<i id="searchIcon1" class="fa fa-search" style="font-size: 14px;" title="切换页面主题">深色主题</i>
+						<i id="searchIcon2" class="fa fa-search" style="font-size: 14px;display: none;" title="切换页面主题">浅色主题</i>
 					</a>
 				</li>
 			</ul>
@@ -157,11 +194,11 @@
 		<div class="news_right">
 			<input type="text" placeholder="Search" style="float: left; width: 160px;border: 1px solid #989898; height: 34px; padding-left: 10px;">
 			<a href="pages/search.html">
-				<img style="float: left;height: 36px;cursor: pointer;" src="imgs/tubiao/search.png" >
+				<img id="input_img" style="float: left;height: 36px;cursor: pointer;" src="imgs/tubiao/search.png" >
 			</a>
 		</div>
 		<div class="news_right_two">
-			<h5>本站公告</h5>
+			<h4>本站公告</h4>
 			<p>Weibo同步更新</p>
 			<img src="imgs/logo/weibo.png" style="width: 100%" >
 			<p>CSDN同步更新</p>
@@ -284,6 +321,63 @@
 <script src="js/wow.min.js"></script>
 <script type="text/javascript">
 	new WOW().init();
+</script>
+
+<!-- 深色主题 -->
+<script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/DarkTheme.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	// $(document).ready(function(){
+		// 获取时间
+		var mydate = new Date();
+		var str = "" + mydate.getFullYear() + "年";
+		str += (mydate.getMonth()+1) + "月";
+		str += mydate.getDate() + "日";
+		str += mydate.getHours() + "点";
+		str += mydate.getMinutes() + "分";
+		str += mydate.getSeconds() + "秒";
+		console.log(str);
+		// 当时间为18：00 —— 9：00 ,主题颜色为深色
+		
+		if (mydate.getHours() >= 18) {
+			console.log("深色主题启用");
+			$("body").addClass("one");
+			$(".news_left").addClass("two");
+			$(".news_right").addClass("two");
+			$(".news_right_two").addClass("two");
+			// $("#headNav").css("background-color","#1B2838!important");
+			$("#headNav").addClass("three");
+			$(".about-cover").addClass("three");
+			$("footer").addClass("footer");
+			$("h2,h4,p,b").addClass("end");
+			$("hr").addClass("hr_border");
+			$("#input_img").attr("src","./imgs/tubiao/search-Dark3.png");
+			// recommer.html中hr的颜色
+			// $("li").addClass("li_border");
+			$("li").addClass("li_font");
+			$("span").addClass("span_font");
+			
+		}
+		
+		if (mydate.getHours() < 9) {
+			console.log("深色主题启用");
+			$("body").addClass("one");
+			$(".news_left").addClass("two");
+			$(".news_right").addClass("two");
+			$(".news_right_two").addClass("two");
+			// $("#headNav").css("background-color","#1B2838!important");
+			$("#headNav").addClass("three");
+			$(".about-cover").addClass("three");
+			$("footer").addClass("footer");
+			$("h2,h4,p,b").addClass("end");
+			$("hr").addClass("hr_border");
+			$("#input_img").attr("src","./imgs/tubiao/search-Dark3.png");
+			// recommer.html中hr的颜色
+			// $("li").addClass("li_border");
+			$("li").addClass("li_font");
+			$("span").addClass("span_font");
+		}
+	// });
 </script>
 </body>
 <!-- End of website body -->

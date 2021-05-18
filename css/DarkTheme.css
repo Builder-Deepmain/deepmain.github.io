@@ -1,0 +1,38 @@
+/* body */
+.one{
+	background-color: rgba(37,61,82,.95)!important; 
+}
+/* .news_left */
+.two {
+	background-color: rgba(22,32,45,.5)!important;
+	box-shadow: 0 0 5px rgba(22,32,45,.5)!important;
+}
+/* #headNav */
+.three{
+	background-color: rgba(27,40,56)!important;
+}
+/* footer */
+.footer{
+	background-color: rgba(0,0,0,.5)!important;
+}
+/* .about-cover {
+	background-color: rgba(27,40,56)!important;
+} */
+/* h2,h4,p,b */
+.end{
+	color: #fff!important;
+}
+/* hr */
+.hr_border {
+	border-color: #fff!important;
+}
+/* // recommer.html中ul li 下边框的颜色 */
+.li_border{
+	border-bottom: 1px solid #575758!important;
+}
+.span_font {
+	color: #D2D2D2;
+}
+.li_font {
+	color: #fff;
+}

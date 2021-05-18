@@ -3,6 +3,20 @@ var app = new Vue({
 	data: {
 		"details_wz":[
 			{
+				"id":'0021',
+				"time":'2020/12/26',
+				"title":'时钟效果实现',
+				"question_type":'B',
+				"content1":'Web前端中如何获取当前时刻的时间呢？这里利用jQuery来做一个示范',
+				"img1_title":'',
+				"img1":'',
+				"img2_title":'',
+				"img2":'',
+				"img3_title":'JS',
+				"img3":'../imgs/details/0021/js.png',
+				"link":''
+			},
+			{
 				"id":'0020',
 				"time":'2020/12/26',
 				"title":'Chrome开发者工具的使用技巧',
