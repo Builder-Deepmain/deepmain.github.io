@@ -14,7 +14,7 @@ var app = new Vue({
 				"img2":'',
 				"img3_title":'JS',
 				"img3":'../imgs/details/0021/js.png',
-				"link":''
+				"link":'https://gitee.com/Deepmain/TianLanCoding/blob/master/Test/%E6%97%B6%E9%92%9F%E6%95%88%E6%9E%9C%E5%AE%9E%E7%8E%B0.html'
 			},
 			{
 				"id":'0020',
