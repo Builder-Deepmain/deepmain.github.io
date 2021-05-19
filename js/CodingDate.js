@@ -456,10 +456,10 @@ var app = new Vue({
 			console.log(a);
 			
 			// 正式运行用，加入gitee.com的域名
-			// var b = a.substr(62,4);
+			var b = a.substr(62,4);
 			
 			// 开发测试用，由于本地ip从59位开始才能获取到后4位id
-			var b = a.substr(59,4);
+			// var b = a.substr(59,4);
 			
 			console.log(b);
 			this.index_id = b;
