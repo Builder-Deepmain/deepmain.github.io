@@ -2,6 +2,21 @@ var app = new Vue({
 	el:'#app',
 	data: {
 		"details_wz":[
+			
+			{
+				"id":'0022',
+				"time":'2020/12/26',
+				"title":'页面深色主题与浅色主题切换时的过渡效果实现',
+				"question_type":'B',
+				"content1":'作为Windows阵营的常客，期间也用过MacOS，个人觉得MacOS与Win最大的区别莫过于UI，MacOS看起来就是一件艺术品，每处都是细节，就比如MacOS中深色主题与浅色主题的切换效果，今天给大家分享一下如何在网页中实现这个效果！',
+				"img1_title":'实现效果展示',
+				"img1":'../imgs/details/0022/r.png',
+				"img2_title":'CSS',
+				"img2":'../imgs/details/0022/css.png',
+				"img3_title":'JS',
+				"img3":'../imgs/details/0022/js.png',
+				"link":'../index.html'
+			},
 			{
 				"id":'0021',
 				"time":'2020/12/26',
@@ -441,10 +456,10 @@ var app = new Vue({
 			console.log(a);
 			
 			// 正式运行用，加入gitee.com的域名
-			var b = a.substr(62,4);
+			// var b = a.substr(62,4);
 			
 			// 开发测试用，由于本地ip从59位开始才能获取到后4位id
-			// var b = a.substr(59,4);
+			var b = a.substr(59,4);
 			
 			console.log(b);
 			this.index_id = b;

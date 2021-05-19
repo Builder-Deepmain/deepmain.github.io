@@ -129,8 +129,8 @@
 				
 				<li>
 					<a href="#searchModal" class="modal-trigger waves-effect waves-light">
-						<i id="searchIcon1" class="fa fa-search" style="font-size: 14px;" title="切换页面主题">深色主题</i>
-						<i id="searchIcon2" class="fa fa-search" style="font-size: 14px;display: none;" title="切换页面主题">浅色主题</i>
+						<i id="searchIcon1" class="fa fa-search theme1" style="font-size: 14px;" onclick="change1()" title="切换页面主题">深色主题</i>
+						<i id="searchIcon2" class="fa fa-search theme2" style="font-size: 14px;display: none;" onclick="change2()" title="切换页面主题">浅色主题</i>
 					</a>
 				</li>
 			</ul>
@@ -323,12 +323,20 @@
 <script type="text/javascript">
 	new WOW().init();
 </script>
-
+<script type="text/javascript">
+	$(document).ready(function(){
+	  // $('#searchIcon1').click(function(){
+	  // 	$("#input_img").attr("src","./imgs/tubiao/search-Dark3.png");
+	  // }
+	  // $('#searchIcon2').click(function(){
+	  // 	$("#input_img").attr("src","./imgs/tubiao/search.png");
+	  // }
+	});
+</script>
 <!-- 深色主题 -->
 <script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/DarkTheme.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-	// $(document).ready(function(){
 		// 获取时间
 		var mydate = new Date();
 		var str = "" + mydate.getFullYear() + "年";
@@ -388,7 +396,8 @@
 			$("li").addClass("li_font");
 			$("span").addClass("span_font");
 		}
-	// });
+		
+	// $('.theme1').click(function(){}
 </script>
 </body>
 <!-- End of website body -->
