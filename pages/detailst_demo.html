@@ -14,12 +14,8 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>天蓝 – Coding.com | 详情页</title>
+  <title>天蓝 – Coding.com</title>
   <link rel="icon" type="image/png" href="../favicon.ico">
-  
-  
-
-  <link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
   
   <!-- 深色主题 -->
   <link rel="stylesheet" type="text/css" href="../css/DarkTheme.css"/>
@@ -27,16 +23,20 @@
   <!-- 浅色主题 -->
   <link rel="stylesheet" type="text/css" href="../css/LightColorThemeClick.css"/>
   
+
+  <link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
+  
+  
   <link rel="stylesheet" type="text/css" href="../css/element-ui.css">
   <link rel="stylesheet" type="text/css" href="../css/news.css"/>
   <link rel="stylesheet" type="text/css" href="../css/animate.css"/>
   <script src="../libs/jquery/jquery-2.2.0.min.js"></script>
-</head>
+
 <body>
 <div id="app">
 	<!-- Start of website body -->
 	<header class="navbar-fixed">
-	    <nav id="headNav" class="bg-color nav-transparent headbar-cover" style="background-color: rgba(29,167,218,.5)!important;">
+	    <nav id="headNav" class="bg-color nav-transparent headbar-cover" style="background-color: #1DA7DA!important;">
 	        <div id="navContainer" class="nav-wrapper container">
 	            <div class="brand-logo">
 	                <a href="../index.html" class="waves-effect waves-light">
@@ -290,12 +290,12 @@
 		<div id="div1" class="wow bounceInRight">
 			<div class="news_right">
 				<input type="text" placeholder="Search" style="float: left; width: 160px;border: 1px solid #989898; height: 34px; padding-left: 10px;">
-				<a href="searchs.html">
-					<img id="input_img" style="float: left;height: 36px;cursor: pointer;" src="../imgs/tubiao/search.png">
+				<a href="search.html">
+					<img style="float: left;height: 36px;cursor: pointer;" src="../imgs/tubiao/search.png">
 				</a>
 			</div>
 			<div class="news_right_two" style="height: ;">
-				<h4>本站公告</h4>
+				<h5>&nbsp;目录</h5>
 				<ul v-if="item.question_type == 'A' ">
 					<a ytag="20054" href="#mk01"><li>描述</li></a>
 					<a ytag="20055" href="#mk02"><li>提出问题</li></a>
@@ -366,6 +366,7 @@
 <!-- <script src="../js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script> -->
 <script src="../js/DarkTheme.js" type="text/javascript" charset="utf-8"></script>
 <script src="../js/ThemeToggle.js" type="text/javascript" charset="utf-8"></script>
+
 </body>
 <!-- End of website body -->
 </html>

@@ -154,73 +154,74 @@
 	}
 	var data = sessionStorage.getItem('Theme_id');
 	
-	if (data == 1) {
-		console.log('当前为浅色主题，正在切换为深色主题');
-		// 隐藏 深色主题链接 ，显示浅色主题链接
-		$("#searchIcon1").css("display","none");
-		$('#searchIcon2').css("display","block");
-		// 先移除
-		$("body").removeClass("one_Lc");
-		$(".news_left").removeClass("two_Lc");
-		$(".news_right").removeClass("two_Lc");
-		$(".news_right_two").removeClass("two_Lc");
-		$("#headNav").removeClass("three_Lc");
-		$(".about-cover").removeClass("three_Lc");
-		$("footer").removeClass("footer_Lc");
-		$("h2,h4,p,b,em").removeClass("end_Lc");
-		$("hr").removeClass("hr_border_Lc");
-		// $("#input_img").attr("src","./imgs/tubiao/search.png");
-		// recommer.html中hr的颜色
-		$("li").removeClass("li_font_Lc");
-		$("span").removeClass("span_font_Lc");
+	// if (data == 1) {
+	// 	console.log('当前为浅色主题，正在切换为深色主题');
+	// 	// 隐藏 深色主题链接 ，显示浅色主题链接
+	// 	// $("#searchIcon1").css("display","none");
+	// 	// $('#searchIcon2').css("display","block");
+	// 	// 先移除
+	// 	$("body").removeClass("one_Lc");
+	// 	$(".news_left").removeClass("two_Lc");
+	// 	$(".news_right").removeClass("two_Lc");
+	// 	$(".news_right_two").removeClass("two_Lc");
+	// 	$("#headNav").removeClass("three_Lc");
+	// 	$(".about-cover").removeClass("three_Lc");
+	// 	$("footer").removeClass("footer_Lc");
+	// 	$("h2,h4,p,b,em").removeClass("end_Lc");
+	// 	$("hr").removeClass("hr_border_Lc");
+	// 	// $("#input_img").attr("src","./imgs/tubiao/search.png");
+	// 	// recommer.html中hr的颜色
+	// 	$("li").removeClass("li_font_Lc");
+	// 	$("span").removeClass("span_font_Lc");
 		
-		// 再添加
-		$("body").addClass("one_c");
-		$(".news_left").addClass("two_c");
-		$(".news_right").addClass("two_c");
-		$(".news_right_two").addClass("two_c");
-		$("#headNav").addClass("three_c");
-		$(".about-cover").addClass("three_c");
-		$("footer").addClass("footer_c");
-		$("h2,h4,p,b,em").addClass("end_c");
-		$("hr").addClass("hr_border_c");
-		$("#input_img").attr("src","./imgs/tubiao/search-Dark3.png");
-		// recommer.html中hr的颜色
-		$("li").addClass("li_font_c");
-		$("span").addClass("span_font_c");
-	} 
-	if (data == 2) {
-		console.log('当前为shen色主题，正在切换为qian色主题');
-		// 隐藏 深色主题链接 ，显示浅色主题链接
-		$("#searchIcon2").css("display","none");
-		$('#searchIcon1').css("display","block");
-		// 先移除
-		$("body").removeClass("one_c");
-		$(".news_left").removeClass("two_c");
-		$(".news_right").removeClass("two_c");
-		$(".news_right_two").removeClass("two_c");
-		$("#headNav").removeClass("three_c");
-		$(".about-cover").removeClass("three_c");
-		$("footer").removeClass("footer_c");
-		$("h2,h4,p,b,em").removeClass("end_c");
-		$("hr").removeClass("hr_border_C");
-		// $("#input_img").attr("src","./imgs/tubiao/search-Dark3.png");
-		// recommer.html中hr的颜色
-		$("li").removeClass("li_font_c");
-		$("span").removeClass("span_font_c");
+	// 	// 再添加
+	// 	$("body").addClass("one_c");
+	// 	$(".news_left").addClass("two_c");
+	// 	$(".news_right").addClass("two_c");
+	// 	$(".news_right_two").addClass("two_c");
+	// 	$("#headNav").addClass("three_c");
+	// 	$(".about-cover").addClass("three_c");
+	// 	$("footer").addClass("footer_c");
+	// 	$("h2,h4,p,b,em").addClass("end_c");
+	// 	$("hr").addClass("hr_border_c");
+	// 	$("#input_img").attr("src","./imgs/tubiao/search-Dark3.png");
+	// 	// recommer.html中hr的颜色
+	// 	$("li").addClass("li_font_c");
+	// 	$("span").addClass("span_font_c");
+	// } 
+	// // console.log('-----' + data);
+	// if (data == 2) {
+	// 	console.log('当前为shen色主题，正在切换为qian色主题');
+	// 	// 隐藏 深色主题链接 ，显示浅色主题链接
+	// 	// $("#searchIcon2").css("display","none");
+	// 	// $('#searchIcon1').css("display","block");
+	// 	// 先移除
+	// 	$("body").removeClass("one_c");
+	// 	$(".news_left").removeClass("two_c");
+	// 	$(".news_right").removeClass("two_c");
+	// 	$(".news_right_two").removeClass("two_c");
+	// 	$("#headNav").removeClass("three_c");
+	// 	$(".about-cover").removeClass("three_c");
+	// 	$("footer").removeClass("footer_c");
+	// 	$("h2,h4,p,b,em").removeClass("end_c");
+	// 	$("hr").removeClass("hr_border_c");
+	// 	// $("#input_img").attr("src","./imgs/tubiao/search-Dark3.png");
+	// 	// recommer.html中hr的颜色
+	// 	$("li").removeClass("li_font_c");
+	// 	$("span").removeClass("span_font_c");
 		
-		// 再添加
-		$("body").addClass("one_Lc");
-		$(".news_left").addClass("two_Lc");
-		$(".news_right").addClass("two_Lc");
-		$(".news_right_two").addClass("two_Lc");
-		$("#headNav").addClass("three_Lc");
-		$(".about-cover").addClass("three_Lc");
-		$("footer").addClass("footer_Lc");
-		$("h2,h4,p,b,em").addClass("end_Lc");
-		$("hr").addClass("hr_border_Lc");
-		$("#input_img").attr("src","./imgs/tubiao/search.png");
-		// recommer.html中hr的颜色
-		$("li").addClass("li_font_Lc");
-		$("span").addClass("span_font_Lc");
-	} 
+	// 	// 再添加
+	// 	$("body").addClass("one_Lc");
+	// 	$(".news_left").addClass("two_Lc");
+	// 	$(".news_right").addClass("two_Lc");
+	// 	$(".news_right_two").addClass("two_Lc");
+	// 	$("#headNav").addClass("three_Lc");
+	// 	$(".about-cover").addClass("three_Lc");
+	// 	$("footer").addClass("footer_Lc");
+	// 	$("h2,h4,p,b,em").addClass("end_Lc");
+	// 	$("hr").addClass("hr_border_Lc");
+	// 	$("#input_img").attr("src","./imgs/tubiao/search.png");
+	// 	// recommer.html中hr的颜色
+	// 	$("li").addClass("li_font_Lc");
+	// 	$("span").addClass("span_font_Lc");
+	// } 
