@@ -450,7 +450,7 @@ var app = new Vue({
 			},
 			{
 				"id":'0003',
-				"time":'2020/09/23',
+				"time":'2019/09/23',
 				"title":'动画库wowjs的推荐使用',
 				"question_type":'D',
 				"content1":'如果你看到了这篇帖子，请你一定要去访问我的blog网站（或者是直接在我的blog中看到的），我在好几个页面中使用了wow.js，animate.css动画，使我的站点更加的awesome，接下来我来告诉你如何像我一样拥有如此炫酷的网站',
