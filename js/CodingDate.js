@@ -5,25 +5,30 @@ var app = new Vue({
             {
 				"id":'0025',
 				"time":'2021/05/29',
-				"title":'微软CEO：一直在测试下一代Windows系统，将很快宣布',
+				"title":'微软CEO：一直在测试下一代Windows系统',
 				"question_type":'E',
-				"content1":'5月26日早间消息，在本周的Build 2021大会上，微软没有花大多时间谈论Windows发展计划，为什么呢？因为微软准备在另一个单独场合介绍操作系统的发展。这不仅让我们疑惑，早前，微软官方宣布过Windows 10为Windows的最后一个版本。如今看来Windows将有新的动向！',
+				"content1":'5月26日早间消息，在本周的Build 2021大会上，微软没有花大多时间谈论Windows发展计划，为什么呢？因为微软准备在另一个单独场合介绍操作系统的发展。这不仅让我们疑惑，早前2015年5月8日，微软高管在ignite会议重申Windows 10为Windows的最后一个版本，将在此基础上，不断的优化完善。如今看来Windows将有新的动向！',
 				"duanluo":[
 					{
 						"title":' ',
-						"img":'../imgs/details/0024/1.png',
-						"main":"在Build主题演讲中，微软CEO萨提亚·纳德拉（Satya Nadella）告诉听众，说他最近几个月一直在测试下一代Windows系统。纳德拉称：很快，我们就会分享Windows更新，它是过去10年最重要的一次更新，新系统会为开发者、创作者带来更大的经济机会。在过去几个月我一直在测试系统，对于下一代Windows我很是期待。我们                                 的承诺是这样的：微软将为今天的每一位Windows开发者创造机会，欢迎每一位寻找最有创造力、最新、最开放平台的创作者，希望他们开发、分发应用并获得收入。很快我们就会分享更多细节。 ",					
-						"main2":"每四个访问 Stack Overflow 问题的用户中，就有一个在访问该页面的五分钟内复制了一些东西。两周内，在 7 百万个帖子和评论中，总共做了 4 千万次复制。人们从答案中复制的频率是问题的 10 倍，是评论的 35 倍。人们从代码块中复制的频率是周围文本的 10 倍以上。令人惊讶的是，在没有被接受的答案的问题上复制次                                 数比在被接受的问题上复制的次数多。",
+						"img":'../imgs/details/0025/1.png',
+						"main":"在Build主题演讲中，微软CEO萨提亚·纳德拉（Satya Nadella）告诉听众，说他最近几个月一直在测试下一代Windows系统。",					
+						"main2":"纳德拉称：很快，我们就会分享Windows更新，它是过去10年最重要的一次更新，新系统会为开发者、创作者带来更大的经济机会。在过去几个月我一直在测试系统，对于下一代Windows我很是期待。我们的承诺是这样的：微软将为今天的每一位Windows开发者创造机会，欢迎每一位寻找最有创造力、最新、最开放平台的创作者，希望他们开发、分发应用并获得收入。很快我们就会分享更多细节。",
+					},
+					{
+						"title":'Windows的下一代操作系统叫什么，国外的网友是这样投票的',
+						"img":'../imgs/details/0025/2.png',
+						"main":" 在 WinCentral 的投票中，有近 2000 人参与投票，备选项有“就叫 Windows 就好”、“Windows 11”、“Windows X”、“Windows 10X”、“Windows 21”、“Windows 10.1”等。结果，最高票被“就叫 Windows 就好”拿下，得票率 65.5%。当然，这只是一次民间投票，微软对 Windows 10 系统今后如何规划，现在看来还是个谜。",
 					},
 					{
 						"title":' ',
 						"img":' ',
-						"main":" 所以，如果你曾经因为从 Stack Overflow 上复制代码而不是从头开始写代码而感到难过，请原谅你自己吧。",
+						"main":"我个人觉得，对于Windows，微软没必要搞那么多的版本，一个Windows 10就可以了，什么新的功能，直接在其基础上升级就可以了。类似的iOS、Android、MacOS等等，大版本的话相应的更新下版本号就行了！说到版本号，微软真的也要改改，什么1809，2021烂七八糟的，学下MacOS不行吗？还有就是UI上面，能不能做的精美点，微软的深色主题真的很难用！",
 					},
 					{
 						"title":' ',
 						"img":'',
-						"main":"备注：数据来自：https://linux.cn/article-13322-1.html",
+						"main":"备注：数据来自：https://www.windowscentral.com/it-time-microsoft-move-windows-10；https://www.163.com/dy/article/GATIG6TR0539AP40.html；https://linux.cn/article-13400-1.html",
 					},
 				],
 			},
@@ -553,10 +558,10 @@ var app = new Vue({
 			console.log(a);
 			
 			// 正式运行用，加入gitee.com的域名
-			var b = a.substr(62,4);
+			// var b = a.substr(62,4);
 			
 			// 开发测试用，由于本地ip从59位开始才能获取到后4位id
-			// var b = a.substr(59,4);
+			var b = a.substr(59,4);
 			
 			console.log(b);
 			this.index_id = b;
