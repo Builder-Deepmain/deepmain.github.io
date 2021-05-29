@@ -22,29 +22,6 @@ var app = new Vue({
 					},
 					{
 						"title":' ',
-						"img":"",
-						"main2":'',
-						"main3":'',
-					},
-					{
-						"title":' ',
-						"img":'',
-						"main":"",
-					},
-					{
-						"title":' ',
-						"img":'',
-						"main":"",
-					},
-					{
-						"title":' ',
-						"img":'',
-						"main":"",
-						"main2":'',
-						"main3":'',
-					},
-					{
-						"title":' ',
 						"img":'',
 						"main":"备注：数据来自：https://linux.cn/article-13322-1.html",
 					},
