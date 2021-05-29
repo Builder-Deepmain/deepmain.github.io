@@ -148,7 +148,7 @@ var app = new Vue({
 				"img4_title":'在你的 console 里 输入下面的命令：document.designMode = "on" ,于是你就可以直接修改网页上的内容了。 ',
 				"img4":'../imgs/details/0020/2.png',
 				"link1":'',
-				"link2":'https://www.bitbug.net/'
+				"link2":'https://coolshell.cn/articles/17634.html'
 			},
 			{
 				"id":'0019',
