@@ -287,7 +287,7 @@ var app = new Vue({
 			{
 				"id":'0011',
 				"time":'2020/05/16',
-				"title":'2021年1月编程语言排行榜：Python年度编程语言',
+				"title":'近期编程语言排行榜：Python年度编程语言',
 				"question_type":'E',
 				"content1":'恭喜Python，再一次获得TIOBE年度编程语言，这已经是Python第四年取得TIOBE年度编程语言称号。这个称号是授予给一年里最受欢迎的编程语言，Python在2020年实现了2.01%的增长，C++紧随其后，本年度增长1.99%，紧接着是C语言（增长1.66），Groovy（+1.23%）和R（+1.10%）。',
 				"duanluo":[
