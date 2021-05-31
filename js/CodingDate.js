@@ -2,6 +2,36 @@ var app = new Vue({
 	el:'#app',
 	data: {
 		"details_wz":[
+			{
+				"id":'0026',
+				"time":'2021/05/31',
+				"title":'关于浮动造成的高度塌陷再研究',
+				"question_type":'E',
+				"content1":'一直没有对浮动及清除浮动做一个细致的研究，今天特意开贴再做一次研讨（之前大致说过一次）。所谓清除浮动就是因为在使用浮动的过程中出现了问题！那么，在使用浮动的过程中会出现什么问题呢？',
+				"duanluo":[
+					{
+						"title":'高度塌陷（使用浮动过程中最容易出现的问题,注意观察父级border）',
+						"img":'../imgs/details/0026/1.png',
+						"main":"如上图所示，有1，2，3个浮动的盒子，它们由一个父盒子包裹，这个父盒子我并没有设置高度",					
+						"main2":"原本父盒子高度应该是自适应的，但是子元素浮动后，父元素高度为0，这种现象称为高度塌陷",
+					},
+					{
+						"title":'如何解决高度塌陷呢？',
+						"img":'../imgs/details/0026/2.png',
+						"main":"以上的三种方法都不能很好的解决",
+					},
+					{
+						"title":'最常用的解决办法',
+						"img":'../imgs/details/0026/3.png',
+						"main":"方案4是方案3的升级",
+					},
+					{
+						"title":'实现效果（注意观察父级border）',
+						"img":'../imgs/details/0026/4.png',
+						"main":"数据来自：https://blog.csdn.net/tiankai100/article/details/83054061 源码下载：",
+					},
+				],
+			},
             {
 				"id":'0025',
 				"time":'2021/05/29',
@@ -558,10 +588,10 @@ var app = new Vue({
 			console.log(a);
 			
 			// 正式运行用，加入gitee.com的域名
-			var b = a.substr(62,4);
+			// var b = a.substr(62,4);
 			
 			// 开发测试用，由于本地ip从59位开始才能获取到后4位id
-			// var b = a.substr(59,4);
+			var b = a.substr(59,4);
 			
 			console.log(b);
 			this.index_id = b;
