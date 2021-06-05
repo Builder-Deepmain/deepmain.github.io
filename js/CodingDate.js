@@ -28,7 +28,11 @@ var app = new Vue({
 					{
 						"title":'实现效果（注意观察父级border）',
 						"img":'../imgs/details/0026/4.png',
+<<<<<<< HEAD
 						"main":"数据来自：https://blog.csdn.net/tiankai100/article/details/83054061 源码下载：https://gitee.com/Deepmain/TianLanCoding/blob/master/Test/%E6%B5%AE%E5%8A%A8%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7.html",
+=======
+						"main":"数据来自：https://blog.csdn.net/tiankai100/article/details/83054061 源码下载(Gitee)",
+>>>>>>> 2cc9329a38daa1c383ef212db9b6ddddb0e606ca
 					},
 				],
 			},
@@ -588,10 +592,10 @@ var app = new Vue({
 			console.log(a);
 			
 			// 正式运行用，加入gitee.com的域名
-			// var b = a.substr(62,4);
+			var b = a.substr(55,4);
 			
 			// 开发测试用，由于本地ip从59位开始才能获取到后4位id
-			var b = a.substr(59,4);
+			// var b = a.substr(59,4);
 			
 			console.log(b);
 			this.index_id = b;
