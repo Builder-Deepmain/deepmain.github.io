@@ -397,10 +397,10 @@ var app = new Vue({
 				"main2":'压缩文件资源应该能够优化这个网站',
 				"img2":'',
 				"img3_title":'设计实验验证',
-				"main3":'控制变量：同一个浏览器，同一个网络环境，同一个PC；对照组：在原来网站的基础上，对图片，CSS文件进行压缩过的网站，',
-				"img3":'',
+				"main3":'控制变量：同一个浏览器，同一个网络环境，同一个PC；对照组：在原来网站的基础上，对图片，CSS文件进行压缩过的网站。这里以压缩前图片2.46MB，压缩后66.0KB进行测试，7*7=49张图片',
+				"img3":'../imgs/details/0009/befor.png',
 				"img4_title":'得出结论',
-				"main4":'压缩网站的文件资源确实能够优化网站',	
+				"main4":'压缩网站的文件资源确实能够优化网站的加载速度',	
 				"img4":'',
 			},
 			{
@@ -589,10 +589,10 @@ var app = new Vue({
 			console.log(a);
 			
 			// 正式运行用，加入gitee.com的域名
-			var b = a.substr(55,4);
+			// var b = a.substr(55,4);
 			
 			// 开发测试用，由于本地ip从59位开始才能获取到后4位id
-			// var b = a.substr(59,4);
+			var b = a.substr(59,4);
 			
 			console.log(b);
 			this.index_id = b;
